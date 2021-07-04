@@ -9,3 +9,24 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+form {
+    position: absolute;
+    top: 85%;
+    left: 74%;
+}
+
+button {
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 50px;
+    color: #FFF;
+    font-size: 1.4rem;
+    font-family: Rekha;
+    background-color: #AA0000;
+    cursor: pointer;
+}
