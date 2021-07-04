@@ -17,10 +17,9 @@ body {
     font-weight: bold;
     font-size: 2rem;
     position: relative;
-    text-align: left;
+    text-align: center;
     margin: 10px 0;
-    top: 30px;
-    left: 50px; 
+    top: 80px;
 }
 
 #About-text {
@@ -28,7 +27,85 @@ body {
     color: #FFF;
     font-size: 1.3rem;
     position: relative;
-    text-align: left;
-    top: 35px;
-    left: 50px; 
+    text-align: center;
+    top: 80px;
+}
+
+#line {
+    position: relative;
+    background-color: #FFF;
+    height: 1px;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+}
+
+.MVV {
+    text-align: center;
+}
+
+.box {
+    position: relative;
+    box-sizing: border-box;
+    width: 350px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 250px;
+}
+
+#Mission {
+    font-family: Helvetica, sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#Mission-text {
+    font-family: Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 1.3rem;
+    position: relative;
+    text-align: center;
+}
+
+#Vision {
+    font-family: Helvetica, sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#Vision-text {
+    font-family: Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 1.3rem;
+    position: relative;
+    text-align: center;
+}
+
+#Values {
+    font-family: Helvetica, sans-serif;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#Values-text {
+    font-family: Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 1.3rem;
+    position: relative;
+    text-align: center;
 }
