@@ -11,6 +11,53 @@ body {
     margin: 55px auto;
 }
 
+.menu {
+    position: fixed;
+    top: 150px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: Helvetica, sans-serif;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#index {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#quemsomos {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#precos {
+    display: inline-block;
+    margin: 0 15px;
+    margin-right: 350px;
+}
+
+#pedido {
+    display: inline-block;
+    margin: 0 15px;
+    margin-left: 150px;
+}
+
+#cliente {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#contato {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+
 #About {
     font-family: Helvetica, sans-serif;
     color: #FFF;

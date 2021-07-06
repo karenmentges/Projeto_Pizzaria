@@ -1,6 +1,7 @@
-<!-- exto com informações da empresa, missão, valores (lista ordenada) -->
+<!-- Texto com informações da empresa, missão, valores (lista ordenada) -->
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,48 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="Shortcut Icon" href="../images/BonAppetit.ico" type="image/x-icon">
     <title>BonAppetit</title>
+    <meta name="description" content="Hot and delicious pizzas, order now!">
+    <meta name="keywords" content="Restaurante, Pizzaria, Pizza, Cheese, Nova Erechim">
+    <meta name="author" content="Karen Mentges">
 </head>
 <body>
-    <div>
-        <img src="../images/BonAppetit2.png" height="134,2" width="329" id="logo">
-    </div>
+    <header>
+        <img src="../images/BonAppetit2.png" height="134,2" width="329" id="logo" alt="Bon Appetit">
+    </header>
+    <nav>
+        <ul class="menu">
+            <li id="index">
+                <a href="index.html">
+                    <span>Index</span>
+                </a>
+            </li>
+            <li id="quemsomos">
+                <a href="quemsomos.html">
+                    <span>Quem Somos</span>
+                </a>
+            </li>
+            <li id="precos">
+                <a href="precos.html">
+                    <span>Preços</span>
+                </a>
+            </li>
+            <li id="pedido">
+                <a href="pedido.html">
+                    <span>Pedido</span>
+                </a>
+            </li>
+            <li id="cliente">
+                <a href="cliente.html">
+                    <span>Cliente</span>
+                </a>
+            </li>
+            <li id="contato">
+                <a href="contato.html">
+                    <span>Contato</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
     <main>
         <div>
             <p id="About">About:</p>
@@ -31,17 +69,23 @@
             </div>   
             <div class="box">
                 <p id="Values">Values:</p>
-                <ul id="Values-text">
+                <ol id="Values-text">
                     <li>Honor the company's brand;</li>
                     <li>Ensure customer satisfaction;</li>
                     <li>Pizza quality;</li>
                     <li>Appreciation of people;</li>
                     <li>Ethic;</li>
                     <li>Commitment.</li>
-                </ul>
+                </ol>
             </div>
         </div>
-        
     </main>
+    <footer>
+        <address>
+            Rua Carlos Gomes, 191
+            Nova Erechim - SC
+        </address>
+        <a href=”https://www.facebook.com/karen.mentges”>Facebook</a>
+    </footer>
 </body>
 </html>
