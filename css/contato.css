@@ -1,0 +1,188 @@
+/* Fundo */
+
+body {
+    background-image: url(../images/Pizza2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin: 55px auto;
+}
+
+
+
+/* Menu de navegação */
+
+.menu {
+    position: fixed;
+    top: 150px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: Helvetica, sans-serif;
+}
+
+nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#index {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#quemsomos {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#precos {
+    display: inline-block;
+    margin: 0 15px;
+    margin-right: 380px;
+}
+
+#pedido {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#cliente {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#contato {
+    display: inline-block;
+    margin: 0 15px;
+    margin-right: 55px;
+}
+
+
+
+/* Conteúdo */
+
+main {
+    width: 1200px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+
+
+
+/* Anúncios */
+
+aside {
+    position: fixed;
+    bottom: 180px;
+    right: 40px;
+}
+
+#anuncio1 {
+    position: relative;
+    padding: 60px 40px;
+    background-color: #cccccc;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: 	#333333;
+    text-align: center;
+    bottom: 50px;
+
+}
+
+#anuncio2 {
+    position: relative;
+    padding: 70px 40px;
+    background-color: #cccccc;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: 	#333333;
+    text-align: center;
+}
+
+.tittle {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+
+
+/* Rodapé */
+
+footer {
+    position: fixed;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #cccccc;
+}
+
+footer a {  
+    color: #333333;
+    text-decoration: none;
+}
+
+#loc, #phone, #face, #insta, #whats {
+    position: relative;
+    display: inline-block;
+    color: #333333;
+    font-size: 40px;
+} 
+
+#address, #number {
+    position: relative;
+    display: inline-block;
+    color: #333333;
+    font-size: 1.2rem;
+    font-family: Helvetica, sans-serif;
+}
+
+#whats {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+#insta {
+    position: absolute;
+    right: 90px;
+    bottom: 20px;
+}
+
+#face {
+    position: absolute;
+    right: 150px;
+    bottom: 20px;
+}
+
+#number {
+    position: absolute;
+    left: 650px;
+    bottom: 30px;
+}
+
+#phone {
+    position: absolute;
+    left: 600px;
+    bottom: 20px;
+}
+
+#address {
+    position: absolute;
+    left: 75px;
+    bottom: 30px;
+}
+
+#loc {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+}
