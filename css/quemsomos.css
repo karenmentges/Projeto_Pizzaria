@@ -1,3 +1,5 @@
+/* Fundo */
+
 body {
     background-image: url(../images/Pizza2.png);
     background-size: cover;
@@ -10,6 +12,10 @@ body {
     text-align: center;
     margin: 55px auto;
 }
+
+
+
+/* Menu de navegação */
 
 .menu {
     position: fixed;
@@ -57,6 +63,9 @@ nav a {
     margin-right: 55px;
 }
 
+
+
+/* Conteúdo */
 
 main {
     width: 1200px;
@@ -112,7 +121,7 @@ main {
     margin-right: 30px;
     margin-top: 250px;
 }
-/* flex box : display flex */
+
 #Mission {
     font-family: Helvetica, sans-serif;
     color: #FFF;
@@ -167,6 +176,10 @@ main {
     text-align: center;
 }
 
+
+
+/* Anúncios */
+
 aside {
     position: fixed;
     bottom: 180px;
@@ -200,15 +213,18 @@ aside {
     font-size: 1.8rem;
 }
 
+
+
+/* Rodapé */
+
 footer {
     position: fixed;
+    display: inline-block;
     left: 0;
     bottom: 0;
     height: 80px;
     width: 100%;
     background-color: #cccccc;
-    color: #333333;
-    font-size: 1.3rem;
 }
 
 footer a {  
@@ -216,4 +232,59 @@ footer a {
     text-decoration: none;
 }
 
+#loc, #phone, #face, #insta, #whats {
+    position: relative;
+    display: inline-block;
+    color: #333333;
+    font-size: 40px;
+} 
 
+#address, #number {
+    position: relative;
+    display: inline-block;
+    color: #333333;
+    font-size: 1.2rem;
+    font-family: Helvetica, sans-serif;
+}
+
+#whats {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+#insta {
+    position: absolute;
+    right: 90px;
+    bottom: 20px;
+}
+
+#face {
+    position: absolute;
+    right: 150px;
+    bottom: 20px;
+}
+
+#number {
+    position: absolute;
+    left: 650px;
+    bottom: 30px;
+}
+
+#phone {
+    position: absolute;
+    left: 600px;
+    bottom: 20px;
+}
+
+#address {
+    position: absolute;
+    left: 75px;
+    bottom: 30px;
+}
+
+#loc {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+}
