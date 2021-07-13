@@ -1,4 +1,4 @@
-<!-- formulário (requisitos serão fornecidos adiante) -->
+<!-- formulário de login para acesso à área restrita e link para página de cadastro de cliente -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pedido.css">
+    <link rel="stylesheet" href="../css/client.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="Shortcut Icon" href="../images/BonAppetit.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <title>BonAppetit</title>
     <meta name="description" content="Hot and delicious pizzas, order now!">
     <meta name="keywords" content="Restaurante, Pizzaria, Pizza, Cheese, Nova Erechim">
@@ -26,35 +27,63 @@
                     <span>Index</span>
                 </a>
             </li>
-            <li id="quemsomos">
-                <a href="quemsomos.html">
-                    <span>Quem Somos</span>
+            <li id="whoweare">
+                <a href="whoweare.html">
+                    <span>Who We Are</span>
                 </a>
             </li>
-            <li id="precos">
-                <a href="precos.html">
-                    <span>Preços</span>
+            <li id="prices">
+                <a href="prices.html">
+                    <span>Prices</span>
                 </a>
             </li>
-            <li id="pedido">
-                <a href="pedido.html">
-                    <span>Pedido</span>
+            <li id="order">
+                <a href="order.html">
+                    <span>Order</span>
                 </a>
             </li>
-            <li id="cliente">
-                <a href="cliente.html">
-                    <span>Cliente</span>
+            <li id="client">
+                <a href="client.html">
+                    <span>Client</span>
                 </a>
             </li>
-            <li id="contato">
-                <a href="contato.html">
-                    <span>Contato</span>
+            <li id="contact">
+                <a href="contact.html">
+                    <span>Contact</span>
                 </a>
             </li>
         </ul>
     </nav>
     <main>
-        
+        <div id="info">
+
+        </div>
+        <div id="login">
+                <form action="" method="get">
+                    <div class="input-div one">
+           	            <div class="i">
+           		            <i class="fas fa-user"></i>
+           	            </div>
+           	            <div class="div">
+           		            <h5>E-mail Address</h5>
+           		            <input type="text" name="usuario" class="input" autocomplete="off" required>
+                        </div>
+           	        </div>
+           	        <div class="input-div pass">
+           		        <div class="i"> 
+           		    	    <i class="fas fa-lock"></i>
+           		        </div>
+           		        <div class="div">
+           		            <h5>Password</h5>
+           		            <input type="password" name="password" class="input" autocomplete="off" required>
+            	        </div>
+                    </div>
+                <input type="submit" value="Sing in">
+                <a href="#" id="forgot-password">Register</a>
+                <a href="#" id="forgot-password">Forgot your password?</a>
+                </form>
+            </div>
+            <script type="text/javascript" src="../js/client.js"></script>
     </main>
     <aside>
         <div id="anuncio1">

@@ -36,31 +36,31 @@ nav a {
     margin: 0 15px;
 }
 
-#quemsomos {
+#whoweare {
     display: inline-block;
     margin: 0 15px;
 }
 
-#precos {
+#prices {
     display: inline-block;
     margin: 0 15px;
     margin-right: 380px;
 }
 
-#pedido {
+#order {
     display: inline-block;
     margin: 0 15px;
 }
 
-#cliente {
+#client {
     display: inline-block;
     margin: 0 15px;
 }
 
-#contato {
+#contact {
     display: inline-block;
     margin: 0 15px;
-    margin-right: 55px;
+    margin-right: 65px;
 }
 
 
@@ -73,108 +73,7 @@ main {
     margin-right: 80px;
 }
 
-#boxabout {
-    text-align: center;
-    margin-left: 80px;
-    margin-right: 80px;
-}
 
-#About {
-    font-family: Helvetica, sans-serif;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 2rem;
-    position: relative;
-    margin: 10px 0;
-    top: 80px;
-}
-
-#About-text {
-    font-family: Helvetica, sans-serif;
-    color: #FFF;
-    font-size: 1.3rem;
-    position: relative;
-    top: 80px;
-}
-
-#line {
-    position: relative;
-    background-color: #FFF;
-    height: 1px;
-    width: 1100px;
-    top: 150px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.MVV {
-    text-align: center;
-}
-
-.box {
-    position: relative;
-    box-sizing: border-box;
-    width: 300px;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 250px;
-}
-
-#Mission {
-    font-family: Helvetica, sans-serif;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 2rem;
-    position: relative;
-    text-align: center;
-    margin: 10px 0;
-}
-
-#Mission-text {
-    font-family: Helvetica, sans-serif;
-    color: #FFF;
-    font-size: 1.3rem;
-    position: relative;
-    text-align: center;
-}
-
-#Vision {
-    font-family: Helvetica, sans-serif;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 2rem;
-    position: relative;
-    text-align: center;
-    margin: 10px 0;
-}
-
-#Vision-text {
-    font-family: Helvetica, sans-serif;
-    color: #FFF;
-    font-size: 1.3rem;
-    position: relative;
-    text-align: center;
-}
-
-#Values {
-    font-family: Helvetica, sans-serif;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 2rem;
-    position: relative;
-    text-align: center;
-    margin: 10px 0;
-}
-
-#Values-text {
-    font-family: Helvetica, sans-serif;
-    color: #FFF;
-    font-size: 1.3rem;
-    position: relative;
-    text-align: center;
-}
 
 
 

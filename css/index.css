@@ -1,13 +1,13 @@
-#logo {
-    position: absolute;
-    top: 32%;
-    left: 60%;
-}
-
 body {
     background-image: url(../images/Pizza1.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#logo {
+    position: absolute;
+    top: 20%;
+    left: 60%;
 }
 
 form {
