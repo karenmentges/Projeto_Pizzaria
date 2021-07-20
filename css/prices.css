@@ -69,9 +69,42 @@ nav a {
 
 main {
     width: 1200px;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin: auto;
+    font-family: Helvetica, sans-serif;
+    padding: 100px 100px;
 }
+
+table {
+    width: 800px;
+    color: white;
+}
+
+table tr th {
+    font-size: 1.8rem; 
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin: 50px;
+}
+
+table tr td {
+    font-size: 1.5rem; 
+    border-bottom: 1px solid white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.size {
+    text-align: left;
+}
+
+.amount {
+    text-align: center;
+}
+
+.price {
+    text-align: right;
+}
+
 
 
 

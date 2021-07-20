@@ -93,6 +93,7 @@ main {
     font-family: Helvetica, sans-serif;
     color: #FFF;
     font-size: 1.3rem;
+    line-height: 1.5rem;
     position: relative;
     top: 80px;
 }
@@ -136,6 +137,7 @@ main {
     font-family: Helvetica, sans-serif;
     color: #FFF;
     font-size: 1.3rem;
+    line-height: 1.5rem;
     position: relative;
     text-align: center;
 }
@@ -154,6 +156,7 @@ main {
     font-family: Helvetica, sans-serif;
     color: #FFF;
     font-size: 1.3rem;
+    line-height: 1.5rem;
     position: relative;
     text-align: center;
 }
@@ -172,6 +175,7 @@ main {
     font-family: Helvetica, sans-serif;
     color: #FFF;
     font-size: 1.3rem;
+    line-height: 1.5rem;
     position: relative;
     text-align: center;
 }
