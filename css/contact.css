@@ -117,22 +117,27 @@ input, select, textarea {
 }
 
 input:focus, select:focus, textarea:focus {
-	background-color: #ffffff;
+	background-color: #FFF;
     outline: none;
 }
 
 input[type=submit], input[type=reset]{
     font-size: 1.1rem;
-	background-color: #FFF;
-	padding: 5px 0;
+	background-color: #333333;
+	padding: 5px;
+    width: 100px;
+    height: 40px;
 	border: 0;
-	color: #AA0000;
+    border-radius: 35px;
+    margin-top: 10px;
+    margin-right: 20px;
+	color: #FFF;
+    font-weight: bold;
 }
 
 input[type=submit]:hover, input[type=reset]:hover{
-	background-color: #ffffff;
+	background-color: #444444;
 	border: 0;
-	color: #AA0000;
 }
 
 #name {
