@@ -73,6 +73,22 @@ main {
     margin-right: 80px;
     font-family: Helvetica, sans-serif;
     color: #FFF;
+    display: inline-block;
+}
+
+#part-one {
+    width: 550px;
+    height: 600px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#part-two{
+    width: 400px;
+    height: 600px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10rem;
 }
 
 .tit {
@@ -83,17 +99,62 @@ main {
 
 .text {
     font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.t {
+    font-size: 1.3rem;
+}
+
+input, select, textarea {
+	background-color: #FFF;
+	padding: 5px;
+    border: 0;
+	border-radius: 15px;
+    margin-bottom: 15px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+	background-color: #ffffff;
+    outline: none;
+}
+
+input[type=submit], input[type=reset]{
+    font-size: 1.1rem;
+	background-color: #FFF;
+	padding: 5px 0;
+	border: 0;
+	color: #AA0000;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+	background-color: #ffffff;
+	border: 0;
+	color: #AA0000;
+}
+
+#name {
+    width: 86%;
+}
+
+#email {
+    width: 85.6%;
+}
+
+#fone {
+    width: 85.4%;
+}
+
+#subject {
+    width: 20%;
+}
+
+#msg {
+    width: 98%;
+    height: 150px;
     margin: 5px 0;
-}
-
-#part-one {
-    width: 600px;
-    display: inline-block;
-}
-
-#part-two{
-    width: 600px;
-    display: inline-block;
 }
 
 
