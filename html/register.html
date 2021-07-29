@@ -1,0 +1,176 @@
+<!-- formulário de login para acesso à área restrita e link para página de cadastro de cliente -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="Shortcut Icon" href="../images/BonAppetit.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>BonAppetit</title>
+    <meta name="description" content="Hot and delicious pizzas, order now!">
+    <meta name="keywords" content="Restaurant, Pizzeria, Pizza, Cheese, Nova Erechim">
+    <meta name="author" content="Karen Mentges">
+</head>
+<body>
+    <header>
+        <img src="../images/BonAppetit2.png" height="134,2" width="329" id="logo" alt="Bon Appetit">
+    </header>
+    <nav>
+        <ul class="menu">
+            <li id="index">
+                <a href="index.html">
+                    <span>Index</span>
+                </a>
+            </li>
+            <li id="whoweare">
+                <a href="whoweare.html">
+                    <span>Who We Are</span>
+                </a>
+            </li>
+            <li id="prices">
+                <a href="prices.html">
+                    <span>Prices</span>
+                </a>
+            </li>
+            <li id="order">
+                <a href="order.html">
+                    <span>Order</span>
+                </a>
+            </li>
+            <li id="client">
+                <a href="client.html">
+                    <span>Client</span>
+                </a>
+            </li>
+            <li id="contact">
+                <a href="contact.html">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Register</h2>
+        <form method="POST" action="">
+            <div id="part-one">
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" name="field_name" id="name" required autofocus autocomplete="off">
+                </div>
+                <div>
+                    <label for="id_email">E-mail: </label>
+                    <input type="email" name="field_email" id="email" required>
+                </div>
+                <div>
+                    <label for="fone">Phone: </label>
+                    <input type="tel" name="field_fone" id="fone">
+                </div>
+                <div>
+                    <label for="db">Date of birth: </label>
+                    <input type="date" name="field_db" id="db">
+                </div>
+                <div>
+                    <label for="password1">Password: </label>
+                    <input type="password" name="field_password1" id="password1">
+                </div>
+                <div>
+                    <label for="password2">Confirm the password: </label>
+                    <input type="password" name="field_password2" id="password2">
+                </div>
+                <div>
+                    <label for="state">State: </label>
+                    <input type="text" name="field_address" id="state">
+                </div>
+                <div>
+                    <label for="city">City: </label>
+                    <input type="text" name="field_address" id="city">
+                </div>
+                <div>
+                    <label for="aaddress">Address: </label>
+                    <input type="text" name="field_address" id="aaddress">
+                </div>
+                <div>
+                    <label for="district">District:</label>
+                    <input type="text" name="field_district" id="district">
+                </div>
+            </div>
+            <div id="part-two">
+                <div>
+                    <fieldset>
+                        <legend>How did you meet our company?</legend>
+                        <label class="radio"><input type="radio" name="field_meet" value="Physical store" checked>Physical store<span class="option"></span></label>
+                        <br>
+                        <label class="radio"><input type="radio" name="field_meet" value="Social networks">Social networks<span class="option"></span></label>
+                        <br>
+                        <label class="radio"><input type="radio" name="field_meet" value="Advertising">Advertising<span class="option"></span></label>
+                        <br>
+                        <label class="radio"><input type="radio" name="field_meet" value="Friends indication">Friends indication<span class="option"></span></label>
+                    </fieldset>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label class="checkbox"><input type="checkbox" name="field_promo1" value="sim" checked>
+                        I want to receive promotions by e-mail
+                        <span class="checkmark"></span>
+                    </label>
+                    <br>
+                    <label class="checkbox"><input type="checkbox" name="field_promo2" value="sim" checked>
+                        I want to receive notifications by Whatsapp
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="comments">Comments:</label><br>
+                    <textarea name="field_comments" rows="5" cols="50" id="comments"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Reset">
+                </div>
+            </div>
+        </form>
+    </main>
+    <aside>
+        <div id="anuncio1">
+            <div class="tittle">
+                Double Wednesday
+            </div> 
+            <br><br> Order two pizzas and <br> get one for free
+        </div>
+        <div id="anuncio2">
+            <div class="tittle">Sweet Monday</div>
+            <br><br> 40% OFF
+        </div>
+    </aside>
+    <footer>
+        <div id="loc">
+            <i class='bx bxs-map' ></i>
+        </div>
+        <address id="address">
+            Crazy Pizza Street, PPP  &nbsp|&nbsp  Wonderland - State of Pizza
+        </address>
+        <div id="phone">   
+            <i class='bx bxs-phone'></i>    
+        </div>
+        <div id="number">
+            (99) 99999-9999
+        </div>
+        <div id="face">
+            <a href=”https://www.facebook.com”><i class='bx bxl-facebook-square' ></i></a>
+        </div>
+        <div id="insta">
+            <a href=”https://www.instagram.com”><i class='bx bxl-instagram' ></i></a>
+        </div>
+        <div id="whats">
+            <a href=”https://web.whatsapp.com/”><i class='bx bxl-whatsapp'></i></a>
+        </div>
+    </footer>
+</body>
+</html>

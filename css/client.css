@@ -71,9 +71,75 @@ main {
     width: 1200px;
     margin-left: 80px;
     margin-right: 80px;
+    font-family: Helvetica, sans-serif;
+    color: #FFF;
 }
 
+form {
+    width: 550px;
+    height: 600px;
+}
 
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+fieldset label {
+    font-size: 1.3rem;
+}
+
+input, select, textarea {
+	background-color: #FFF;
+	padding: 5px;
+    border: 0;
+	border-radius: 15px;
+    margin-bottom: 15px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+	background-color: #FFF;
+    outline: none;
+}
+
+input[type=submit], input[type=reset]{
+    font-size: 1.1rem;
+	background-color: #333333;
+	padding: 5px;
+    width: 150px;
+    height: 40px;
+	border: 0;
+    border-radius: 35px;
+    margin-top: 20px;
+	color: #FFF;
+    font-weight: bold;
+}
+
+input[type=submit]:hover, input[type=reset]:hover{
+	background-color: #444444;
+	border: 0;
+}
+
+#register a{
+    color: #FFF;
+}
+
+#register{
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+
+#email {
+    width: 85.6%;
+}
+
+#password {
+    width: 79.8%;
+}
 
 
 

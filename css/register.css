@@ -1,3 +1,12 @@
+::selection {
+    background: #444444;
+}
+::-moz-selection {
+    background: #444444;
+}
+
+
+
 /* Fundo */
 
 body {
@@ -91,19 +100,21 @@ main {
     margin-left: 9rem;
 }
 
-.tit {
+form label {
+    font-size: 1.3rem;
+}
+
+main h2 {
     font-weight: bold;
     font-size: 1.8rem;
     margin: 30px 0;
 }
 
-.text {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-}
-
-.t {
-    font-size: 1.3rem;
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    margin-top: -60px;
 }
 
 input, select, textarea {
@@ -145,22 +156,170 @@ input[type=submit]:hover, input[type=reset]:hover{
 }
 
 #email {
-    width: 85.6%;
-}
-
-#fone {
     width: 85.4%;
 }
 
-#subject {
-    width: 20%;
+#fone {
+    width: 85.2%;
 }
 
-#msg {
-    width: 98%;
-    height: 150px;
-    margin: 5px 0;
+#db {
+    width: 25%;
 }
+
+#password1 {
+    width: 79.6%;
+}
+
+#password2 {
+    width: 59.3%;
+}
+
+#state {
+    width: 87.4%;
+}
+
+#city {
+    width: 89.6%;
+}
+
+#aaddress {
+    width: 82.3%;
+}
+
+#district {
+    width: 84.7%;
+}
+
+#comments {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+
+
+/* Radio */
+
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.option {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #FFF;
+  border-radius: 50%;
+}
+
+.radio:hover input ~ .option {
+  background-color: #ddd;
+}
+
+.radio input:checked ~ .option {
+  background-color: #444444;
+}
+
+.option:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio input:checked ~ .option:after {
+  display: block;
+}
+
+.radio .option:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+
+/* Checkbox */
+
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: -6.5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #FFF;
+}
+
+.checkbox:hover input ~ .checkmark {
+    background-color: #ddd;
+}
+
+.checkbox input:checked ~ .checkmark {
+    background-color: #444444;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+} 
 
 
 
