@@ -54,7 +54,152 @@
         </ul>
     </nav>
     <main>
-        
+        <form id="form_order">
+            <label for="size">Select the size of the pizza:</label>
+            <select name="size" id="size">
+                <option value="">---- Select ----</option>
+                <option value="es">Extra Small</option>
+                <option value="s">Small</option>
+                <option value="m">Medium</option>
+                <option value="l">Large</option>
+                <option value="el">Extra Large</option>
+            </select>
+            <br><br>
+            <div id="options_order">
+            <p>You selected <strong id="numFlavors">0</strong> de <strong id="limitFlavors">0</strong> flavors</p>
+                <div id="menu">
+
+                    <div class="flavor" id="flavor1">
+                        <label>
+                            <input type="checkbox" name="flavors[]" value="1">
+                            <div class="flavor_img">
+                                <img src="../images/chicken.jpg" alt="chicken">
+                            </div>
+                            <div class="flavor_description">
+                                <strong>Chicken</strong>
+                                Sauce, chicken, cream cheese and mozzarella
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flavor" id="flavor2">
+                        <label>
+                            <input type="checkbox" name="flavors[]" value="2">
+                            <div class="flavor_img">
+                                <img src="../images/corn.jpg" alt="corn">
+                            </div>
+                            <div class="flavor_description">
+                                <strong>Corn</strong>
+                                Sauce, corn and mozzarella
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flavor" id="flavor3">
+                        <label>
+                            <input type="checkbox" name="flavors[]" value="3">
+                            <div class="flavor_img">
+                                <img src="../images/garlic.jpg" alt="garlic and oil">
+                            </div>
+                            <div class="flavor_description">
+                                <strong>Garlic and oil</strong>
+                                Sauce, garlic, oil and mozzarella
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flavor" id="flavor4">
+                        <label>
+                            <input type="checkbox" name="flavors[]" value="4">
+                            <div class="flavor_img">
+                                <img src="../images/margherita.jpg" alt="margherita">
+                            </div>
+                            <div class="flavor_description">
+                                <strong>Margherita</strong>
+                                Sauce, mozzarella, basil, tomato
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flavor" id="flavor5">
+                        <label>
+                            <input type="checkbox" name="sabores[]" value="5">
+                            <div class="sabor_img">
+                                <img src="../images/mozzarella.jpg" alt="mozzarella">
+                            </div>
+                            <div class="sabor_description">
+                                <strong>Mozzarella</strong>
+                                Sauce, mozzarella and oregano
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flavor" id="flavor6">
+                        <label>
+                            <input type="checkbox" name="flavors[]" value="6">
+                            <div class="flavor_img">
+                                <img src="../images/pepperoni.jpg" alt="pepperoni">
+                            </div>
+                            <div class="flavor_description">
+                                <strong>Pepperoni</strong>
+                                Sauce, pepperoni and mozzarella
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flavor" id="flavor7">
+                        <label>
+                            <input type="checkbox" name="flavor[]" value="7">
+                            <div class="flavor_img">
+                                <img src="../images/stroganoff.jpg" alt="stroganoff">
+                            </div>
+                            <div class="flavor_description">
+                                <strong>Stroganoff</strong>
+                                Sauce, stroganoff and potato chips
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flavor" id="flavor8">
+                        <label>
+                            <input type="checkbox" name="flavors[]" value="8">
+                            <div class="flavor_img">
+                                <img src="../images/tuna.jpg" alt="tuna">
+                            </div>
+                            <div class="flavor_description">
+                                <strong>Tuna</strong>
+                                Sauce, tuna, onion and mozzarella
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flavor" id="flavor9">
+                        <label>
+                            <input type="checkbox" name="flavors[]" value="9">
+                            <div class="flavor_img">
+                                <img src="../images/vegetarian.jpg" alt="vegetarian">
+                            </div>
+                            <div class="flavor_description">
+                                <strong>Vegetarian</strong>
+                                Sauce, arugula, sun-dried tomatoes and mozzarella
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+
+                <br><br>
+                <fieldset>
+                    <legend>Select the edge option:</legend>
+                    <label><input type="radio" name="edge" value="Borderless" checked>Borderless</label><br>
+                    <label><input type="radio" name="edge" value="Catupiry">Catupiry</label><br>
+                    <label><input type="radio" name="edge" value="Cheddar">Cheddar</label><br>
+                    <label><input type="radio" name="edge" value="Chocolate">Chocolate</label><br>
+                </fieldset>
+                <br><br>
+                <input type="submit" value="Add to cart" name="add">
+            </div>
+        </form>
     </main>
     <aside>
         <div id="anuncio1">
@@ -92,4 +237,5 @@
         </div>
     </footer>
 </body>
+<script src="../js/order.js"></script>
 </html>

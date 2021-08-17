@@ -73,6 +73,15 @@ main {
     margin-right: 80px;
 }
 
+#options_order {
+    display: none;
+}
+
+/* ARRUMAR ESSA PARTE */
+.selected {
+    background-color: #aad3c6;
+	transition: 1s;
+}
 
 
 
