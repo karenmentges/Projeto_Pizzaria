@@ -1,32 +1,65 @@
-body {
-    background-image: url(../images/Pizza1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.container {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	grid-template-rows: 90vh 10vh;
+}
+
+.logo {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+    background-color: #AA0000;
+}
+
+.button {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    text-align: center;
+    background-color: #AA0000;
+}
+
+#image {
+    display: none;
 }
 
 #logo {
-    position: absolute;
-    top: 20%;
-    left: 60%;
+    width: 80%;
+    position: relative;
+    top: 25vh;
 }
 
-form {
-    position: absolute;
-    top: 85%;
-    left: 74%;
-}
-
-button {
-    text-align: center;
-    font-weight: bold;
-    border: none;
-    height: 40px;
-    width: 150px;
-    border-radius: 20px;
-    margin-top: 50px;
+.button a {
+    text-decoration: none;
     color: #FFF;
-    font-size: 1.4rem;
+    font-weight: bold;
+    font-size: 1.5rem;
     font-family: Rekha;
-    background-color: #AA0000;
     cursor: pointer;
+}
+
+
+@media (min-width: 850px){
+
+    .image {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-image: url(../images/Pizza1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .logo {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        text-align: center;
+        background-color: #AA0000;
+    }
+
+    .button {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        text-align: center;
+        background-color: #AA0000;
+    }
+    
 }

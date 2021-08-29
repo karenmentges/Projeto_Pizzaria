@@ -55,19 +55,22 @@
     </nav>
     <main>
         <div id="part-one">
-            <form> 
+            <form method="get" id="form_contact" novalidate> 
                 <h2 class="tit">Contact Us</h2>
                 <div>
                     <label for="name" class="t">Name:</label>
                     <input type="text" name="name" id="name" size="50" maxlength="50" required autocomplete="off" autofocus>
+                    <div id="error_name"></div>
                 </div>
                 <div>
                     <label for="email" class="t">E-mail:</label>
                     <input type="email" name="email" id="email">
+                    <div id="error_email"></div>
                 </div>
                 <div>
                     <label for="fone" class="t">Phone:</label>
-                    <input type="tel" name="phone" id="fone" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}">
+                    <input type="tel" name="phone" id="fone">
+                    <div id="error_phone"></div>
                 </div>
                 <div>
                     <label for="subject" class="t">Subject:</label>
@@ -78,10 +81,13 @@
                         <option value="3">Reviews</option>
                         <option value="4">Compliments</option>
                     </select>
+                    <div id="error_subject"></div>
                 </div>
                 <div>
                     <label for="msg" class="t">Message:</label><br>
-                    <textarea name="message" id="msg"></textarea>
+                    <textarea name="mensagem" id="msg" cols="70" rows="5"></textarea>
+                    <div id="count">0/300</div>
+                    <div id="error_msg"></div>
                 </div>
                 <div>
                     <input type="submit" name="send" value="Submit">
@@ -137,4 +143,5 @@
         </div>
     </footer>
 </body>
+<script src="../js/contact.js"></script>
 </html>
