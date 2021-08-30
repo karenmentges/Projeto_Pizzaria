@@ -16,9 +16,14 @@
     <meta name="author" content="Karen Mentges">
 </head>
 <body>
+    <div class="container">
+    <div class="image"></div>
     <header>
-        <img src="../images/BonAppetit2.png" height="134,2" width="329" id="logo" alt="Bon Appetit">
+        <img src="../images/BonAppetit2.png" width="329" id="logo" alt="Bon Appetit">
     </header>
+    <div id="menu">
+        <span id="showMenu" onclick="showMenu()">&equiv; Menu</span>
+    </div>
     <nav>
         <ul class="menu">
             <li id="index">
@@ -54,21 +59,21 @@
         </ul>
     </nav>
     <main>
-        <div id="boxabout">
+        <div class="conteudo">
+        <div class="boxabout">
             <p id="About">About:</p>
             <p id="About-text">Company dedicated to the production of delicious pizzas for our customers. Aiming to bring new experiences through the flavors of each pizza.</p>  
         </div>
         <div id="line"></div>
-        <div class="MVV">
-            <div class="box">
+            <div class="boxmission">
                 <p id="Mission">Mission:</p>
                 <p id="Mission-text">Dedicated to the production of quality pizzas, serving the population in the best way possible.</p>
             </div> 
-            <div class="box">
+            <div class="boxvision">
                 <p id="Vision">Vision:</p>
                 <p id="Vision-text">Be recognized in the field of activity, for providing quality in the product and also in the service.</p>
             </div>   
-            <div class="box">
+            <div class="boxvalues">
                 <p id="Values">Values:</p>
                 <ol id="Values-text">
                     <li>Honor the company's brand;</li>
@@ -82,30 +87,37 @@
         </div>
     </main>
     <aside>
-        <div id="anuncio1">
+        <div class="anuncio" id="anuncio1">
             <div class="tittle">
                 Double Wednesday
             </div> 
             <br><br> Order two pizzas and <br> get one for free
         </div>
-        <div id="anuncio2">
+        <div class="anuncio" id="anuncio2">
             <div class="tittle">Sweet Monday</div>
             <br><br> 40% OFF
         </div>
     </aside>
     <footer>
-        <div id="loc">
+        <div class="part-one">
+            <div class="address">
+            <div id="loc">
             <i class='bx bxs-map' ></i>
         </div>
         <address id="address">
             Crazy Pizza Street, PPP  &nbsp|&nbsp  Wonderland - State of Pizza
         </address>
+        </div>
+        <div class="phone">
         <div id="phone">   
             <i class='bx bxs-phone'></i>    
         </div>
         <div id="number">
             (99) 99999-9999
         </div>
+        </div>
+        </div>
+        <div class="part-two">
         <div id="face">
             <a href=”https://www.facebook.com”><i class='bx bxl-facebook-square' ></i></a>
         </div>
@@ -115,6 +127,9 @@
         <div id="whats">
             <a href=”https://web.whatsapp.com/”><i class='bx bxl-whatsapp'></i></a>
         </div>
+        </div>
     </footer>
+    </div>
 </body>
+<script src="../js/functions.js"></script>
 </html>
