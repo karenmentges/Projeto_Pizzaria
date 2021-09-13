@@ -152,7 +152,7 @@ header {
 
 /* Anúncios */
 
-.anuncio {
+.ad {
     position: relative;
     font-family: Helvetica, sans-serif;
     font-size: 1.3rem;
@@ -160,18 +160,18 @@ header {
     text-align: center;
     background-color: #cccccc;
     margin: 40px 40px;
-    top: 20;
+    top: 40;
 }
 
-#anuncio1 {
+#ad1 {
     padding: 60px 40px;
 }
 
-#anuncio2 {
+#ad2 {
     padding: 70px 40px;
 }
 
-.tittle {
+.t_ad {
     font-weight: bold;
     font-size: 1.8rem;
 }
@@ -336,7 +336,7 @@ footer a {
 
     /* Anúncios */
 
-    .anuncio {
+    .ad {
         margin: 50px 40px;
         top: 60px;
     }
