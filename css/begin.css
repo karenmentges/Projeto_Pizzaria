@@ -37,6 +37,28 @@
     cursor: pointer;
 }
 
+/* Eliminando partes desnecessárias */
+
+header {
+    display: none;
+}
+
+aside {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
 
 @media (min-width: 850px){
 

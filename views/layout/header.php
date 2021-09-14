@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="Shortcut Icon" href="../images/BonAppetit.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="Shortcut Icon" href="images/BonAppetit.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <title>BonAppetit</title>
     <meta name="description" content="Hot and delicious pizzas, order now!">
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="image"></div>
         <header>
-            <img src="../images/BonAppetit2.png" width="329" id="logo" alt="Bon Appetit">
+            <img src="images/BonAppetit2.png" width="329" id="logo" alt="Bon Appetit">
         </header>
         <div id="menu">
             <span id="showMenu" onclick="showMenu()">&equiv; Menu</span>
@@ -25,32 +25,32 @@
         <nav>
             <ul class="menu">
                 <li id="index">
-                    <a href="index.html">
+                    <a href="index.php">
                         <span>Index</span>
                     </a>
                 </li>
                 <li id="whoweare">
-                    <a href="whoweare.html">
+                    <a href="index.php?acao=whoweare">
                         <span>Who We Are</span>
                     </a>
                 </li>
                 <li id="prices">
-                    <a href="prices.html">
+                    <a href="index.php?acao=prices">
                         <span>Prices</span>
                     </a>
                 </li>
                 <li id="order">
-                        <a href="order.html">
+                        <a href="index.php?acao=order">
                         <span>Order</span>
                     </a>
                 </li>
                 <li id="client">
-                    <a href="client.html">
+                    <a href="index.php?acao=client">
                         <span>Client</span>
                     </a>
                 </li>
                 <li id="contact">
-                    <a href="contact.html">
+                    <a href="index.php?acao=contact">
                         <span>Contact</span>
                     </a>
                 </li>
