@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="Shortcut Icon" href="images/BonAppetit.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="Shortcut Icon" href="assets/images/BonAppetit.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <title>BonAppetit</title>
     <meta name="description" content="Hot and delicious pizzas, order now!">
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="image"></div>
         <header>
-            <img src="images/BonAppetit2.png" width="329" id="logo" alt="Bon Appetit">
+            <img src="assets/images/BonAppetit2.png" width="329" id="logo" alt="Bon Appetit">
         </header>
         <div id="menu">
             <span id="showMenu" onclick="showMenu()">&equiv; Menu</span>

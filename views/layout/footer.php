@@ -31,5 +31,5 @@
     </footer>
     </div>
 </body>
-<script src="../js/functions.js"></script>
+<script src="assets/js/functions.js"></script>
 </html>

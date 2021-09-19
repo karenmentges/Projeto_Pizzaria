@@ -9,7 +9,6 @@ var sizeOptions = {
 /* Função chamada quando ocorre mudança no campo tamanho */
 function selectSize(){
     let selectedSize = document.getElementById("size").value;
-    console.log(selectedSize);
     if(selectedSize == '') {
         document.getElementById("options_order").style.display = "none";
     }
@@ -31,7 +30,7 @@ function selectSize(){
         }
     }
 }
-/* Associa a função ao envento chage do campo tamanho */
+/* Associa a função ao envento change do campo tamanho */
 document.getElementById("size").addEventListener('change', selectSize);
 
 
@@ -47,7 +46,7 @@ function countSelected(){
     return total;
 }
 
-/* Função chamada quando um checkbx for marcado ou desmarcado */
+/* Função chamada quando um checkbox for marcado ou desmarcado */
 function updateCount(){
     let selectedSize = document.getElementById("size").value;
     let total = countSelected();
@@ -87,9 +86,7 @@ function addToCart(event){
     else if(total == 0) {
         alert("You need to select at least one flavor");
         event.preventDefault(); //interromper a submissão do form
-    }
-
-    
+    }  
 }
 /* Associa função ao evento do formulário */
 document.getElementById("form_order").addEventListener('submit', addToCart);

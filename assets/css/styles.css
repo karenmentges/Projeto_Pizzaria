@@ -157,7 +157,7 @@ fieldset legend, main legend {
     font-weight: bold;
     font-size: 1.8rem;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 fieldset label {
@@ -166,6 +166,10 @@ fieldset label {
 
 form label {
     font-size: 1.3rem;
+}
+
+#how {
+    margin-top: 80px;
 }
 
 .text {
@@ -205,6 +209,10 @@ input[type=submit], input[type=reset]{
 input[type=submit]:hover, input[type=reset]:hover{
 	background-color: #444444;
 	border: 0;
+}
+
+#add {
+    width: 120px;
 }
 
 #register a{
@@ -278,6 +286,98 @@ input[type=submit]:hover, input[type=reset]:hover{
 
 iframe {
     width: 95%;
+}
+
+
+
+/* Tabelas */
+
+table {
+    position: relative;
+    top: 30px;
+}
+
+table tr th {
+    font-size: 1.3rem; 
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    vertical-align: middle;
+}
+
+table tr td {
+    font-size: 1rem; 
+    border-bottom: 1px solid white;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+}
+
+.size {
+    text-align: left;
+}
+
+.amount {
+    text-align: center;
+}
+
+.price {
+    text-align: right;
+}
+
+
+
+/* Pedido */
+
+#carte{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+} 
+
+.flavor{
+    min-width: 200px;
+    max-width: 550px;
+	padding: 5px 5px 5px 0;
+    color: #333333;
+	background-color: #cccccc;
+	border: 1px solid #cccccc;
+	margin: 5px;
+	transition: 0.5s; 
+}
+
+.flavor img{
+	width: 80px;
+	border-radius: 40px;
+	margin: 0 20px 0 20px;
+}
+ 
+.flavor label{
+	display: flex;
+	align-items: center;
+} 
+
+.flavor_description{
+	display: flex;
+	flex-direction: column;
+} 
+
+.t_flavor {
+    font-size: 1.3rem; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.i_flavor {
+    font-size: 1.2rem;
+}
+
+.selected {
+    background-color: #ffffff;
+	transition: 1s;
+}
+
+#options_order {
+    display: none;
 }
 
 
@@ -472,6 +572,15 @@ footer a {
 } 
 
 
+@media (min-width: 450px){
+
+    /* Pedido */
+
+    .flavor{
+        width: 400px;	
+    }
+
+}
 
 
 @media (min-width: 1080px){
@@ -591,49 +700,6 @@ footer a {
 
 
 
-    /* Anúncios */
-
-    .ad {
-        margin: 50px 40px;
-        top: 60px;
-    }
-
-
-
-    /* Rodapé */
-
-    footer .part-one {
-        grid-column: 1/2;
-        grid-row: 4/5;
-        position: relative;
-        text-align: left;
-        margin-left: 30px;
-    }
-
-    footer .part-two {
-        grid-column: 2/3;
-        grid-row: 4/5;
-        position: relative;
-        text-align: left;
-        margin-right: 30px;
-    }
-
-    #loc, #phone, #face, #insta, #whats {
-        font-size: 40px;
-        margin: 17px 5px;
-    } 
-
-    #address, #number {
-        font-size: 1.2rem;
-        margin-right: 40px;
-    }
-
-    #number {
-        margin-right: 840px;
-    }
-
-
-
     /* Formulários */
 
 
@@ -697,5 +763,76 @@ footer a {
         width: 43.5%;
         border-radius: 15px;
     }
+
+
+
+    /* Tabelas */
+
+    table {
+        width: 500px;
+    }
+
+    table tr th {
+        font-size: 1.5rem;
+    }
+
+    table tr td {
+        font-size: 1.3rem;
+    }
+
+
+
+    /* Pedido */
+
+    .flavor{
+        width: 550px;	
+    }
+
+
+
+    /* Anúncios */
+
+    .ad {
+        margin: 50px 40px;
+        top: 60px;
+    }
+
+
+
+    /* Rodapé */
+
+    footer .part-one {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        position: relative;
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    footer .part-two {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        position: relative;
+        text-align: left;
+        margin-right: 30px;
+    }
+
+    #loc, #phone, #face, #insta, #whats {
+        font-size: 40px;
+        margin: 17px 5px;
+    } 
+
+    #address, #number {
+        font-size: 1.2rem;
+        margin-right: 40px;
+    }
+
+    #number {
+        margin-right: 840px;
+    }
+
+
+
+    
 
 }
