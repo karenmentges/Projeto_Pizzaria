@@ -1,9 +1,8 @@
 <?php
     abstract class Connection{
-        // atributo
+        
         public static $connection;
 
-        // método
         public static function connect(){
             if(!isset(self::$connection)){
                 try{

@@ -61,7 +61,7 @@ CREATE TABLE itemOrder (
   flavor3 INTEGER,
   flavor4 INTEGER,
   flavor5 INTEGER,
-  amount INTEGER,
+  edge INTEGER,
   value REAL,
   FOREIGN KEY (codOrder) REFERENCES orderPizza(code),
   FOREIGN KEY (codSize) REFERENCES sizePizza(code),
@@ -91,3 +91,6 @@ INSERT INTO sizePizza values (NULL, "s", "Small", 2, 7);
 INSERT INTO sizePizza values (NULL, "m", "Medium", 3, 10);
 INSERT INTO sizePizza values (NULL, "l", "Large", 4, 13);
 INSERT INTO sizePizza values (NULL, "el", "Extra Large", 5, 16);
+
+/* inserindo uma cliente com senha cli123 */
+INSERT INTO client VALUES (NULL, "Karen Ruver Mentges", "karen@gmail.com", "111111", "2000-02-01", "$2y$10$L.AfIDkigTTNjCJL7i6wZ.288kMqc1Byz.kcfOVaPok2JfsN6wgtC", "SC", "Nova Erechim", "Rua Carlos Gomes, 191", "Centro", 1, 0, 0, NULL); 

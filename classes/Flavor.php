@@ -1,13 +1,11 @@
 <?php
     class Flavor{
 
-        // atributos
         private $code;
         private $name;
         private $ingredients;
         private $nameImage;
 
-        // métodos
         public function getCode(){
             return $this->code;
         }
@@ -39,6 +37,17 @@
         public function setNameImage($nameImage){
             $this->nameImage = $nameImage;
         } 
+
+        public function validate(){
+            $erros = array();
+            if(empty($this->getName()))
+                $erros[] = "It is necessary to enter a name.";
+            if(empty($this->getIngredients()))
+                $erros[] = "It is necessary to inform the list of ingredients.";
+            if(empty($this->getNameImage()))
+                $erros[] = "It is necessary to select an image.";  
+            return $erros;                                  
+        }
         
     }
 ?>

@@ -1,33 +1,42 @@
-var sizeOptions = {
-    'es' : 1,
-    's' : 2,
-    'm' : 3, 
-    'l' : 4,
-    'el' : 5,
-}
+var flavorsAmount;
 
-/* Função chamada quando ocorre mudança no campo tamanho */
+/* funcao chamada quando ocorre mudanca no campo tamanho */
 function selectSize(){
     let selectedSize = document.getElementById("size").value;
-    if(selectedSize == '') {
+    if(selectedSize == ""){
         document.getElementById("options_order").style.display = "none";
     }
-    else {
+    else{
         document.getElementById("options_order").style.display = "block";
-        document.getElementById("limitFlavors").innerHTML = sizeOptions[selectedSize];
+      //  document.getElementById("limitFlavors").innerHTML = sizeOptions[selectedSize];
         document.getElementById("numFlavors").innerHTML = 0;
-        
-        /* Limpas todos os checkboxes */
-        let checks = document.getElementsByName("flavors[]");
-        for(let i=0; i<checks.length; i++){
-            checks[i].checked = false;
-        }
 
-        /* Retirar estilo selecionado de todas as divs */
-        let divs = document.getElementByClassName("flavor");
-        for(let i=0; i<divs.length; i++){
+        // ajax
+        let req = new XMLHttpRequest();
+        req.open("GET", "ajax/size.php?initials="+selectedSize, true);
+        req.send();
+        req.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200){
+                let data = JSON.parse(this.responseText);
+                flavorsAmount = data.flavorsAmount;
+                document.getElementById("showPrice").innerHTML = parseFloat(data.price).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+                document.getElementById("limitFlavors").innerHTML = data.flavorsAmount;
+                document.getElementById("price").value = data.price;
+                document.getElementById("codSize").value = data.code;
+                document.getElementById("nameSize").value = data.name;
+            }
+        };
+        // fim ajax
+
+        // limpar todos os checkboxes
+        let checks = document.getElementsByName("flavors[]");
+        for(let i = 0; i < checks.length; i++)
+            checks[i].checked = false;
+            
+        // retirar estilo selecionado de todas as divs
+        let divs = document.getElementsByClassName("flavor");
+        for(let i = 0; i < divs.length; i++)    
             divs[i].classList.remove("selected");
-        }
     }
 }
 /* Associa a função ao envento change do campo tamanho */
@@ -51,7 +60,7 @@ function updateCount(){
     let selectedSize = document.getElementById("size").value;
     let total = countSelected();
     document.getElementById("numFlavors").innerHTML = total;
-    if(total>sizeOptions[selectedSize]){
+    if(total>flavorsAmount){
         alert("You exceeded the number of flavors allowed");
     }
 }
@@ -79,7 +88,7 @@ for(let i=0; i<checks.length; i++){
 function addToCart(event){
     let selectedSize = document.getElementById("size").value;
     let total = countSelected();
-    if(total>sizeOptions[selectedSize]){
+    if(total>flavorsAmount){
         alert("You exceeded the number of flavors allowed");
         event.preventDefault(); //interromper a submissão do form
     }

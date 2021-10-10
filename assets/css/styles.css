@@ -57,6 +57,14 @@ footer {
     font-size: 1.3rem;
 }
 
+.menu_mobile{
+    display: block;
+}
+
+.menu_web {
+    display: none;
+}
+
 nav a {
     color: #FFF;
     text-decoration: none;
@@ -104,6 +112,24 @@ header {
     text-align: center;
     font-family: Helvetica, sans-serif;
     color: #FFF;
+}
+
+.welcome {
+    width: 77.5vw;
+}   
+
+#welcome {
+    font-size: 5vw;
+    margin-top: 130px;
+}
+
+#BA {
+    font-size: 15vw;
+}
+
+#pizzeria{
+    font-size: 5vw;
+    text-align: right;
 }
 
 .boxabout {
@@ -288,6 +314,11 @@ iframe {
     width: 95%;
 }
 
+.warning {
+    color: #FFF;   
+    font-size: 1.3rem;
+}
+
 
 
 /* Tabelas */
@@ -334,6 +365,12 @@ table tr td {
 	flex-direction: row;
 } 
 
+#options_order p {
+    font-size: 1.1rem;
+    margin: 10px;
+    margin-left: 0;
+}
+
 .flavor{
     min-width: 200px;
     max-width: 550px;
@@ -342,6 +379,8 @@ table tr td {
 	background-color: #cccccc;
 	border: 1px solid #cccccc;
 	margin: 5px;
+    margin-right: 10px;
+    margin-left: 0;
 	transition: 0.5s; 
 }
 
@@ -378,6 +417,22 @@ table tr td {
 
 #options_order {
     display: none;
+}
+
+
+
+/* Área do Clinte */
+
+.myaccount h4 {
+    font-size: 1.3rem;
+    margin: 25px;
+    margin-left: 0;
+}
+
+.myaccount p {
+    font-size: 1.1rem;
+    margin: 10px;
+    margin-left: 0;
 }
 
 
@@ -446,6 +501,10 @@ footer a {
     font-family: Helvetica, sans-serif;
     margin-right: 40px;
 }
+
+#doubts{
+	display: none;	 
+} 
 
 
 
@@ -624,6 +683,20 @@ footer a {
 
     /* Menu */
 
+    .menu_web {
+        display: block;
+        color: white;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.1rem;
+        margin-top: 10px;
+        margin-right: 40px;
+        text-align: right;
+    }   
+
+    .menu_web i, .menu_web a {
+        color: white;
+    }
+
     nav li {
         display: inline-block;
         margin: 0px 15px;
@@ -662,6 +735,24 @@ footer a {
         display: grid;
     	grid-template-columns: 1fr 1fr 1fr;
     	grid-template-rows: 20vh 5vh 20vh;
+    }
+
+    .welcome {
+        width: 46.5vw;
+    }   
+
+    #welcome {
+        font-size: 3vw;
+        margin-top: 130px;
+    }
+
+    #BA {
+        font-size: 9vw;
+    }
+
+    #pizzeria{
+        font-size: 3vw;
+        text-align: right;
     }
 
     .boxabout {
@@ -794,7 +885,42 @@ footer a {
 
     .ad {
         margin: 50px 40px;
-        top: 60px;
+        top: 20px;
+    }
+
+
+
+    /* Dúvidas */
+
+    #doubts{
+		color: white;
+		background-color: #333333;
+        font-family: Helvetica, sans-serif;
+		width: 335px;
+		height: 130px;
+		position: fixed;
+		bottom: 0;
+		right: 40px;
+		display: flex;	 
+		align-items: flex-start;	
+		justify-content: space-between;
+		padding: 5px;		
+	} 	
+
+	#doubts .btHelp{
+        color: #333333;
+		background-color: #cccccc;
+		padding: 2px 5px;
+		margin: 3px;
+		cursor: pointer;
+	}
+
+	#doubts #buttons{
+		display: flex;
+	}
+
+    #text {
+        margin: 10px;
     }
 
 
@@ -802,6 +928,7 @@ footer a {
     /* Rodapé */
 
     footer .part-one {
+        width: 75%;
         grid-column: 1/2;
         grid-row: 4/5;
         position: relative;
@@ -810,10 +937,11 @@ footer a {
     }
 
     footer .part-two {
+        width: 15%;
         grid-column: 2/3;
         grid-row: 4/5;
         position: relative;
-        text-align: left;
+        text-align: right;
         margin-right: 30px;
     }
 
@@ -827,12 +955,8 @@ footer a {
         margin-right: 40px;
     }
 
-    #number {
+    /* #number {
         margin-right: 840px;
-    }
-
-
-
-    
+    } */
 
 }

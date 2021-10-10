@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,10 +22,18 @@
         <div class="image"></div>
         <header>
             <img src="assets/images/BonAppetit2.png" width="329" id="logo" alt="Bon Appetit">
-        </header>
-        <div id="menu">
+
+            <div id="menu_mobile">
+                <span class="material-icons">
+                    <a href='index.php?acao=cliente'>login</a>
+                </span> 
+                &nbsp;           
+                <span class="material-icons">
+                    <a href='index.php?acao=carrinho'>shopping_cart</a>
+                </span>
+            </div>
             <span id="showMenu" onclick="showMenu()">&equiv; Menu</span>
-        </div>
+        </header>
         <nav>
             <ul class="menu">
                 <li id="index">

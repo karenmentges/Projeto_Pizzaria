@@ -19,7 +19,7 @@
         <div>
             <label for="subject">Subject:</label>
             <select name="subject" id="subject">
-                <option value="0">Select</option>
+                <option value="">Select</option>
                 <option value="1">Doubts</option>
                 <option value="2">Suggestions</option>
                 <option value="3">Reviews</option>

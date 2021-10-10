@@ -1,6 +1,6 @@
 <main>
     <legend>Order your pizza</legend>
-    <form id="form_order">
+    <form id="form_order" method="post" action="index.php?acao=addCart">
         <label for="size">Select the size of the pizza:</label>
         <select name="size" id="size">
             <option value="">---- Select ----</option>
@@ -12,7 +12,12 @@
         </select>
         <br><br>
         <div id="options_order">
-            <p>You selected <strong id="numFlavors">0</strong> de <strong id="limitFlavors">0</strong> flavors</p>
+            <p>Price: <strong id="showPrice">0</strong></p>
+            <p>You selected <strong id="numFlavors">0</strong> out of <strong id="limitFlavors">0</strong> flavors</p>
+            <input type="hidden" name="price" id="price">
+            <input type="hidden" name="codSize" id="codSize">
+            <input type="hidden" name="nameSize" id="nameSize">
+                        
             <div id="carte">
                 <?php
                 require_once "classes/FlavorDAO.php";
@@ -20,9 +25,9 @@
                 $list = $obj->list();
                 foreach($list as $flavor){
                 ?>
-                    <div class="flavor" id="flavor<?=$flavor->getCode();?>">
+                    <div class="flavor" id="flavor<?=$flavor->getCode()."-".$flavor->getName();?>">
                         <label class="checkbox">
-                            <input type="checkbox" name="flavors[]" value="<?=$flavor->getCode();?>">
+                            <input type="checkbox" name="flavors[]" value="<?=$flavor->getCode()."-".$flavor->getName();?>">
                             <div class="flavor_image">
                                 <img src="assets/images/<?=($flavor->getNameImage() == "")? "no_picture.jpg" : $flavor->getNameImage();?>" alt="image: <?=$flavor->getName();?>">
                             </div>
@@ -50,4 +55,14 @@
         </div>
     </form>   
 </main>
+
+<div id="doubts">
+    <div id="text">Doubts? <br><br> Speak with our attendants.</div>
+    <div id="buttons">
+        <span id="minHelp" class="btHelp" onclick="minHelp()">&or;</span>
+        <span id="maxHelp" class="btHelp" onclick="maxHelp()">&and;</span>
+        <span id="closeHelp" class="btHelp" onclick="closeHelp()">x</span>
+    </div>            
+</div>
+
 <script src="assets/js/order.js"></script>

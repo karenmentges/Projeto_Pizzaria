@@ -1,9 +1,9 @@
 <main>
     <legend>Register</legend>
-    <form method="POST" action="">
+    <form method="POST" id="form_register" name="registerform" action="">
         <div>
             <label for="name">Name: </label>
-            <input type="text" name="field_name" id="name" required autofocus autocomplete="off">
+            <input type="text" name="field_name" id="name" required autofocus>
         </div>
         <div>
             <label for="id_email">E-mail: </label>
@@ -11,35 +11,35 @@
         </div>
         <div>
             <label for="fone">Phone: </label>
-            <input type="tel" name="field_fone" id="fone">
+            <input type="tel" name="field_fone" id="fone" required>
         </div>
         <div>
             <label for="db">Date of birth: </label>
-            <input type="date" name="field_db" id="db">
+            <input type="date" name="field_db" id="db" required>
         </div>
         <div>
             <label for="password1">Password: </label>
-            <input type="password" name="field_password1" id="password1">
+            <input type="password" name="field_password1" id="password1" minlength="6" required>
         </div>
         <div>
             <label for="password2">Confirm password: </label>
-            <input type="password" name="field_password2" id="password2">
+            <input type="password" name="field_password2" id="password2" minlength="6" required>
         </div>
         <div>
             <label for="state">State: </label>
-            <input type="text" name="field_address" id="state">
+            <input type="text" name="field_state" id="state" required>
         </div>
         <div>
             <label for="city">City: </label>
-            <input type="text" name="field_address" id="city">
+            <input type="text" name="field_city" id="city" required>
         </div>
         <div>
             <label for="aaddress">Address: </label>
-            <input type="text" name="field_address" id="aaddress">
+            <input type="text" name="field_address" id="aaddress" required>
         </div>
         <div>
             <label for="district">District:</label>
-            <input type="text" name="field_district" id="district">
+            <input type="text" name="field_district" id="district" required>
         </div>
         <div>
             <fieldset>
@@ -55,12 +55,12 @@
         </div>
         <br><br>
         <div>
-            <label class="checkbox"><input type="checkbox" name="field_promo1" value="sim" checked>
+            <label class="checkbox"><input type="checkbox" name="field_promo1" value="yes" checked>
                 I want to receive promotions by e-mail
                 <span class="checkmark"></span>
             </label>
             <br>
-            <label class="checkbox"><input type="checkbox" name="field_promo2" value="sim" checked>
+            <label class="checkbox"><input type="checkbox" name="field_promo2" value="yes" checked>
                 I want to receive notifications by Whatsapp
                 <span class="checkmark"></span>
             </label>
@@ -71,7 +71,7 @@
             <textarea name="field_comments" rows="5" cols="50" id="comments"></textarea>
         </div>
         <div>
-            <input type="submit" value="Register">
+            <input type="submit" value="Register" onclick="validatePassword()" index.php?acao=registered>
             <input type="reset" value="Reset">
         </div>
     </form>
