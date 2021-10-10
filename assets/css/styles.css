@@ -42,6 +42,8 @@ footer {
     grid-row: 6/9;
     background-color: #cccccc;
     text-align: center;
+    color: #333333;
+    font-family: Helvetica, sans-serif;
 }
 
 
@@ -58,10 +60,12 @@ footer {
 }
 
 .menu_mobile{
+    color: #FFF;
+    font-family: Helvetica, sans-serif;
     display: block;
 }
 
-.menu_web {
+.menu_web, .menu_admi {
     display: none;
 }
 
@@ -83,6 +87,10 @@ nav li {
     color: #FFF;
     cursor: pointer;
     margin: 20px;
+}
+
+#showMenu {
+    display: block;
 }
 
 
@@ -177,6 +185,7 @@ header {
 }
 
 
+
 /* Formulários */
 
 fieldset legend, main legend {
@@ -204,10 +213,12 @@ form label {
 }
 
 input, select, textarea {
-	background-color: #FFF;
+	background-color: #cccccc;
+    color: #333333;
 	padding: 5px;
     border: 0;
 	border-radius: 15px;
+    margin-top: 5px;
     margin-bottom: 15px;
     font-family: Helvetica, sans-serif;
     font-size: 1.1rem;
@@ -250,23 +261,7 @@ input[type=submit]:hover, input[type=reset]:hover{
     margin-top: 30px;
 }
 
-#email {
-    width: 95%;
-}
-
-#password {
-    width: 95%;
-}
-
-#name {
-    width: 95%;
-}
-
-#fone {
-    width: 95%;
-}
-
-#subject {
+#email, #password, #name, #fone, #subject, #db, #password1, #password2, #state, #city, #aaddress, #district, iframe {
     width: 95%;
 }
 
@@ -276,47 +271,19 @@ input[type=submit]:hover, input[type=reset]:hover{
     margin: 5px 0;
 }
 
-#db {
-    width: 95%;
-}
-
-#password1 {
-    width: 95%;
-}
-
-#password2 {
-    width: 95%;
-}
-
-#state {
-    width: 95%;
-}
-
-#city {
-    width: 95%;
-}
-
-#aaddress {
-    width: 95%;
-}
-
-#district {
-    width: 95%;
-}
-
 #comments {
     width: 95%;
     height: 100px;
-    margin-top: 10px;
-}
-
-iframe {
-    width: 95%;
 }
 
 .warning {
     color: #FFF;   
     font-size: 1.3rem;
+}
+
+.error_form {
+    margin-bottom: 10px;
+    color: #cccccc;
 }
 
 
@@ -328,19 +295,52 @@ table {
     top: 30px;
 }
 
+.tablePrice tr th {
+    font-size: 1.3rem;
+}
+
+.tablePrice tr td {
+    font-size: 1.1rem;
+}
+
 table tr th {
-    font-size: 1.3rem; 
+    font-size: 1.1rem; 
     border-bottom: 2px solid white;
-    padding-bottom: 10px;
+    padding: 15px;
+    text-align: left;
     vertical-align: middle;
 }
 
 table tr td {
-    font-size: 1rem; 
+    font-size: 0.8rem; 
     border-bottom: 1px solid white;
+    padding: 15px;
     padding-top: 30px;
-    padding-bottom: 10px;
+    text-align: left;
     vertical-align: middle;
+}
+
+.buttonnew{
+	background-color: #cccccc;
+    width: 130px;
+	border: 0;
+	border-radius: 35px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+	cursor: pointer;    
+}
+
+.buttonnew a {
+    color: #333333;
+    font-size: 1rem; 
+    font-weight: bold;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+table a, a {
+    color: #FFF;
 }
 
 .size {
@@ -353,6 +353,10 @@ table tr td {
 
 .price {
     text-align: right;
+}
+
+.action {
+    text-align: center;
 }
 
 
@@ -467,6 +471,11 @@ table tr td {
 
 /* Rodapé */
 
+.footeradm {
+    margin: 30px;
+    font-family: Helvetica, sans-serif;
+}
+
 footer .part-one {
     grid-column: 1/2;
     grid-row: 6/8;
@@ -479,7 +488,8 @@ footer .part-two {
     position: relative;
 }
 
-footer div, footer address {
+footer div, footer address, footer p {
+    font-family: Helvetica, sans-serif;
     position: relative;
     display: inline-block;
     color: #333333;
@@ -536,12 +546,12 @@ footer a {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #FFF;
+  background-color: #cccccc;
   border-radius: 50%;
 }
 
 .radio:hover input ~ .option {
-  background-color: #ddd;
+  background-color: #ffffff;
 }
 
 .radio input:checked ~ .option {
@@ -597,11 +607,11 @@ footer a {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #FFF;
+    background-color: #cccccc;
 }
 
 .checkbox:hover input ~ .checkmark {
-    background-color: #ddd;
+    background-color: #ffffff;
 }
 
 .checkbox input:checked ~ .checkmark {
@@ -697,18 +707,26 @@ footer a {
         color: white;
     }
 
+    .menu_admin {
+        display: block;
+    } 
+
     nav li {
         display: inline-block;
         margin: 0px 15px;
     }
 
-    #prices {
+    #prices, #clients {
         margin-right: 380px;
     }
 
     #contact {
         margin-right: 65px;
     }  
+
+    #exit {
+        margin-right: 130px;
+    }
 
     #menu {
         display: none;
@@ -794,64 +812,12 @@ footer a {
     /* Formulários */
 
 
-    #email {
-        width: 37.5%;
-    }
-
-    #password {
-        width: 35%;
-    }
-
-    #name {
-        width: 37.7%;
-    }
-
-    #fone {
-        width: 37.5%;
-    }
-
-    #subject {
-        width: 37.4%;
-    }
-
-    #msg {
-        width: 43%;
-    }
-
-    #db {
-        width: 33.2%;
-    }
-
-    #password1 {
-        width: 35%;
-    }
-
-    #password2 {
-        width: 28.8%;
-    }
-
-    #state {
-        width: 38.3%;
-    }
-
-    #city {
-        width: 39.3%;
-    }
-
-    #aaddress {
-        width: 36%;
-    }
-
-    #district {
-        width: 37%;
-    }
-
-    #comments {
-        width: 43%;
+    #email, #login, #fone, #password, #name, #subject, #msg, #db, #password1, #password2, #state, #city, #aaddress, #district, #comments, #ingred, #img {
+        width: 50%;
     }
 
     iframe {
-        width: 43.5%;
+        width: 50%;
         border-radius: 15px;
     }
 
@@ -859,16 +825,32 @@ footer a {
 
     /* Tabelas */
 
-    table {
+    .tablePrice {
         width: 500px;
     }
 
-    table tr th {
+    .tablePrice tr th {
         font-size: 1.5rem;
     }
 
-    table tr td {
+    .tablePrice tr td {
         font-size: 1.3rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table tr th {
+        font-size: 1.2rem;
+    }
+
+    table tr td, .buttonnew {
+        font-size: 1rem;
+    }
+
+    .buttonnew a {
+        font-size: 1.2rem; 
     }
 
 
@@ -947,16 +929,11 @@ footer a {
 
     #loc, #phone, #face, #insta, #whats {
         font-size: 40px;
-        margin: 17px 5px;
+        margin: 18px 0 5px 0;
     } 
 
     #address, #number {
         font-size: 1.2rem;
         margin-right: 40px;
     }
-
-    /* #number {
-        margin-right: 840px;
-    } */
-
 }

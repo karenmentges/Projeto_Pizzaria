@@ -2,22 +2,22 @@
     <form method="get" id="form_contact" novalidate> 
         <legend>Contact Us</legend>
         <div>
-            <label for="name">Name:</label>
+            <label for="name">Name:</label><br>
             <input type="text" name="name" id="name" size="50" maxlength="50" required autocomplete="off" autofocus>
             <div id="error_name"></div>
         </div>
         <div>
-            <label for="email">E-mail:</label>
+            <label for="email">E-mail:</label><br>
             <input type="email" name="email" id="email">
             <div id="error_email"></div>
         </div>
         <div>
-            <label for="fone">Phone:</label>
+            <label for="fone">Phone:</label><br>
             <input type="tel" name="phone" id="fone">
             <div id="error_phone"></div>
         </div>
         <div>
-            <label for="subject">Subject:</label>
+            <label for="subject">Subject:</label><br>
             <select name="subject" id="subject">
                 <option value="">Select</option>
                 <option value="1">Doubts</option>

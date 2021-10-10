@@ -1,4 +1,6 @@
 <main>
+    <legend><?=$title?></legend>
+    <br><br>
     <div class="erro_form">
     <?php
     if(isset($erros) && count($erros) != 0){
@@ -19,9 +21,7 @@
     $comments = (isset($_POST['field_comments'])) ? $_POST['field_comments'] : "";
     ?>
     </div>
-
-    <legend>Register</legend>
-    <form method="POST" id="form_register" name="registerform" action="index.php?acao=registered" enctype="multipart/form-data">
+    <form action="#" method="post" id="form_register" enctype="multipart/form-data">
         <div>
             <label for="name">Name: </label><br>
             <input type="text" name="field_name" id="name" value="<?=$name?>" required autofocus>
@@ -103,9 +103,9 @@
             <div id="count">0/300</div>
         </div>
         <div>
-            <input type="submit" value="Register" name="register">
+            <input type="submit" value="Register" name="insert">
             <input type="reset" value="Reset">
         </div>
     </form>
 </main>
-<script src="assets/js/register.js"></script>
+<script src="../assets/js/register.js"></script>

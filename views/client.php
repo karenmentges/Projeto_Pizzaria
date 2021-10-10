@@ -3,11 +3,11 @@
         <fieldset>
             <legend>Access your account</legend>
             <div>
-                <label for="email">E-mail:</label>
+                <label for="email">E-mail:</label><br>
                 <input type="email" name="field_email" id="email">
             </div>
             <div>
-                <label for="password">Password:</label>
+                <label for="password">Password:</label><br>
                 <input type="password" name="field_password" id="password">
             </div>
             <br>

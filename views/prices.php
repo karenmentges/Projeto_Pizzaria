@@ -1,6 +1,6 @@
 <main>
     <legend>Prices</legend>
-    <table>
+    <table class="tablePrice">
         <tr>
             <th class="size">Size</th>
             <th class="amount">Flavors amount</th>

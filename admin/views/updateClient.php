@@ -1,4 +1,6 @@
 <main>
+    <legend><?=$title?></legend>
+    <br><br>
     <div class="erro_form">
     <?php
     if(isset($erros) && count($erros) != 0){
@@ -8,20 +10,19 @@
         echo "</ul>";
     }
 
-    $name = (isset($_POST['field_name'])) ? $_POST['field_name'] : "";
-    $email = (isset($_POST['field_email'])) ? $_POST['field_email'] : "";
-    $fone = (isset($_POST['field_fone'])) ? $_POST['field_fone'] : "";
-    $db = (isset($_POST['field_db'])) ? $_POST['field_db'] : "";
-    $state = (isset($_POST['field_state'])) ? $_POST['field_state'] : "";
-    $city = (isset($_POST['field_city'])) ? $_POST['field_city'] : "";
-    $address = (isset($_POST['field_address'])) ? $_POST['field_address'] : "";
-    $district = (isset($_POST['field_district'])) ? $_POST['field_district'] : "";
-    $comments = (isset($_POST['field_comments'])) ? $_POST['field_comments'] : "";
+    $name = (isset($_POST['field_name'])) ? $_POST['field_name'] : $client->getName();
+    $email = (isset($_POST['field_email'])) ? $_POST['field_email'] : $client->getEmail();
+    $fone = (isset($_POST['field_fone'])) ? $_POST['field_fone'] : $client->getPhone();
+    $db = (isset($_POST['field_db'])) ? $_POST['field_db'] : $client->getBirthDate();
+    $state = (isset($_POST['field_state'])) ? $_POST['field_state'] : $client->getState();
+    $city = (isset($_POST['field_city'])) ? $_POST['field_city'] : $client->getCity();
+    $address = (isset($_POST['field_address'])) ? $_POST['field_address'] : $client->getAddress();
+    $district = (isset($_POST['field_district'])) ? $_POST['field_district'] : $client->getDistrict();
+    $comments = (isset($_POST['field_comments'])) ? $_POST['field_comments'] : $client->getComments();
     ?>
     </div>
-
-    <legend>Register</legend>
-    <form method="POST" id="form_register" name="registerform" action="index.php?acao=registered" enctype="multipart/form-data">
+    <form action="#" method="post" id="form_register" enctype="multipart/form-data">
+        <input type="hidden" name="cod" value="<?=$_GET['cod']?>">
         <div>
             <label for="name">Name: </label><br>
             <input type="text" name="field_name" id="name" value="<?=$name?>" required autofocus>
@@ -103,7 +104,7 @@
             <div id="count">0/300</div>
         </div>
         <div>
-            <input type="submit" value="Register" name="register">
+            <input type="submit" value="Update" name="update">
             <input type="reset" value="Reset">
         </div>
     </form>
