@@ -23,3 +23,12 @@ function maxHelp(){
     let text = document.getElementById("text");
     text.innerHTML = "Doubts? <br><br> Speak with our attendants.";
 }
+
+function activateCheckbox(name) {
+    let checkbox = document.getElementsByName(name);
+    checkbox.checked = true;
+}
+
+function disableCheckbox(el) {
+    el.checked = false;
+}

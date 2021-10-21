@@ -26,10 +26,10 @@
                 $query->bindValue(":codClient", $order->getCodClient());
                 $query->execute();
                 $array = $query->fetch(PDO::FETCH_ASSOC);
-                $codOrder = $array['code']; 
+                $codOrder = $array['code'];
                 // inserir os itens
                 foreach($order->getItens() as $item){
-                    $query = $this->connection->prepare("INSERT INTO itemOrder values (NULL, :codOrder, :codSize, :flavor1, :flavor2, :flavor3, :flavor4, :edge, :value)"); 
+                    $query = $this->connection->prepare("INSERT INTO itemOrder VALUES (NULL, :codOrder, :codSize, :flavor1, :flavor2, :flavor3, :flavor4, :flavor5, :edge, :value)"); 
                     $query->bindValue(":codOrder", $codOrder);
                     $query->bindValue(":codSize", $item->getCodeSize()); 
                     $flavors = $item->getFlavors(); // array (cod, nome) 
@@ -37,6 +37,7 @@
                     $query->bindValue(":flavor2", isset($flavors[1]) ? $flavors[1][0] : NULL); 
                     $query->bindValue(":flavor3", isset($flavors[2]) ? $flavors[2][0] : NULL); 
                     $query->bindValue(":flavor4", isset($flavors[3]) ? $flavors[3][0] : NULL); 
+                    $query->bindValue(":flavor5", isset($flavors[4]) ? $flavors[4][0] : NULL); 
                     $query->bindValue(":edge", $item->getEdge()); 
                     $query->bindValue(":value", $item->getPrice()); 
                     $query->execute();

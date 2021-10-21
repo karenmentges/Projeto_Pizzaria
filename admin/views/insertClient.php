@@ -103,7 +103,7 @@
             <div id="count">0/300</div>
         </div>
         <div>
-            <input type="submit" value="Register" name="insert">
+            <input type="submit" value="Register" name="insert" onclick="return validatePassword()">
             <input type="reset" value="Reset">
         </div>
     </form>

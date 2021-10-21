@@ -19,6 +19,9 @@
     $address = (isset($_POST['field_address'])) ? $_POST['field_address'] : $client->getAddress();
     $district = (isset($_POST['field_district'])) ? $_POST['field_district'] : $client->getDistrict();
     $comments = (isset($_POST['field_comments'])) ? $_POST['field_comments'] : $client->getComments();
+    $meet = $client->getHowMeet();
+    $promo1 = $client->getPizzaPromo();
+    $promo2 = $client->getPartnersPromo();
     ?>
     </div>
     <form action="#" method="post" id="form_register" enctype="multipart/form-data">
@@ -76,23 +79,23 @@
         <div>
             <fieldset>
                 <legend id="how">How did you meet our company?</legend>
-                <label class="radio"><input type="radio" name="field_meet" value="1" checked>Physical store<span class="option"></span></label>
+                <label class="radio"><input type="radio" name="field_meet" value="1" <?if($meet==1){ ?> checked <? } ?>>Physical store<span class="option"></span></label>
                 <br>
-                <label class="radio"><input type="radio" name="field_meet" value="2">Social networks<span class="option"></span></label>
+                <label class="radio"><input type="radio" name="field_meet" value="2" <?if($meet==2){ ?> checked <? } ?>>Social networks<span class="option"></span></label>
                 <br>
-                <label class="radio"><input type="radio" name="field_meet" value="3">Advertising<span class="option"></span></label>
+                <label class="radio"><input type="radio" name="field_meet" value="3" <?if($meet==3){ ?> checked <? } ?>>Advertising<span class="option"></span></label>
                 <br>
-                <label class="radio"><input type="radio" name="field_meet" value="4">Friends indication<span class="option"></span></label>
+                <label class="radio"><input type="radio" name="field_meet" value="4" <?if($meet==4){ ?> checked <? } ?>>Friends indication<span class="option"></span></label>
             </fieldset>
         </div>
         <br><br>
         <div>
-            <label class="checkbox"><input type="checkbox" name="field_promo1" value="1" checked>
+            <label class="checkbox"><input type="checkbox" name="field_promo1" value="1" <?if($promo1==1){ ?> checked <? } ?>>
                 I want to receive promotions by e-mail
                 <span class="checkmark"></span>
             </label>
             <br>
-            <label class="checkbox"><input type="checkbox" name="field_promo2" value="1" checked>
+            <label class="checkbox"><input type="checkbox" name="field_promo2" value="1" <?if($promo2==1){ ?> checked <? } ?>>
                 I want to receive notifications by Whatsapp
                 <span class="checkmark"></span>
             </label>
@@ -104,9 +107,9 @@
             <div id="count">0/300</div>
         </div>
         <div>
-            <input type="submit" value="Update" name="update">
+            <input type="submit" value="Update" name="update" onclick="return validatePassword()">
             <input type="reset" value="Reset">
         </div>
     </form>
 </main>
-<script src="assets/js/register.js"></script>
+<script src="../assets/js/register.js"></script>

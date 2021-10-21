@@ -21,14 +21,15 @@
                foreach($_SESSION['cart'] as $pos => $item){
                    $item = unserialize($item);
                    $total += $item->getPrice();
-                   echo 
-                   "<tr>
-                        <td>".$item->getNameSize()."</td>
-                        <td>".$item->getListFlavors()."</td>
-                        <td>".$item->getEdge()."</td>
-                        <td>".Helper::formatPrice($item->getPrice())."</td>
+                   ?> 
+                   <tr>
+                        <td> <?=$item->getNameSize()?> </td>
+                        <td> <?=$item->getListFlavors()?> </td>
+                        <td> <?if($item->getEdge()==1){ echo "Borderless"; } else if($item->getEdge()==2){ echo "Catupiry"; } else if($item->getEdge()==3){ echo "Cheddar"; } else if($item->getEdge()==4){ echo "Chocolate"; }?></td>
+                        <td> <?=Helper::formatPrice($item->getPrice())?> </td>
                         <td><a href='index.php?acao=delCart&pos=$pos'>delete</a></td>
-                    </tr>";    
+                    </tr>  
+                    <?php  
                }
                ?>
                <tr>
@@ -36,15 +37,16 @@
                    <th colspan="2"><?=Helper::formatPrice($total)?></th>
                </tr>
             </table>
-            <br>
+            <br><br><br><br>
             <form method="post" action="index.php?acao=close" id="form">
                 <fieldset>
                     <legend>Delivery options:</legend>
-                    <label><input type="radio" name="deliveryoptions" value="0" checked>Pick up at the store</label><br>
-                    <label><input type="radio" name="deliveryoptions" value="1">Receive at home</label><br>
+                    <label class="radio"><input type="radio" name="deliveryoptions" value="1" checked>Pick up at the store<span class="option"></span></label><br>
+                    <label class="radio"><input type="radio" name="deliveryoptions" value="2">Receive at home<span class="option"></span></label><br>
                 </fieldset>
-                <p><a href="index.php?acao=order"><i class='bx bxs-shopping-bag'></i>Keep shopping</a></p>
-                <p><a href="#" onclick="if (confirm('Do you confirm the closing of this order?')) document.getElementById('form').submit(); else return false;"><i class='bx bxs-check-circle' ></i>Close order</a></p>
+                <br><br>
+                <span class="buttoncart"><a href="index.php?acao=order"><i class='bx bxs-shopping-bag'></i>Keep shopping</a></span>
+                <span class="buttoncart"><a href="#" onclick="if (confirm('Do you confirm the closing of this order?')) document.getElementById('form').submit(); else return false;"><i class='bx bxs-check-circle' ></i>Close order</a></span>
             </form>
             <?php
         }    

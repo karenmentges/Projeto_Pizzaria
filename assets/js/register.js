@@ -116,7 +116,6 @@ function validatePassword2(){
 function validatePassword(){
     if(pass1.value != pass2.value){
 		alert('Different passwords!');
-		userform.field_password1.focus();
 		return false;
 	}
 	else if(pass1.value == pass2.value){
@@ -181,7 +180,7 @@ function validateDistrict(){
 }
 
 function submitForm(event){
-    if(!(validateName() && validateEmail() && validatePhone() && validateBirthDate() && validatePassword1() && validatePassword2() && validatePassword() && validateState() && validateCity() && validateAddress() && validateDistrict())){
+    if(!(validateName() && validateEmail() && validatePhone() && validateBirthDate() && validatePassword1() && validatePassword2() && validateState() && validateCity() && validateAddress() && validateDistrict())){
         event.preventDefault();
     }
     else{

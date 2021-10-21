@@ -7,7 +7,7 @@
             echo "Hello, visitor! (<a href='index.php?acao=client'>login</a>)";
         ?>
         &nbsp;&nbsp;
-        <a href="index.php?acao=cart"><i class='bx bxs-cart' >&nbsp;</i>My cart<?=isset($_SESSION['cart'])? " (".count($_SESSION['cart']).")" : " (0)"; ?></a>
+        <a href="index.php?acao=cart"><i class='bx bxs-cart' >&nbsp;</i>My cart<?=isset($_SESSION['cart']) ? "(".count($_SESSION['cart']).")" : "(0)"; ?></a>
     </div>
     
     <div class="ad" id="ad1">

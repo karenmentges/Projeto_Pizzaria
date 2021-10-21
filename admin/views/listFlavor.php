@@ -10,18 +10,18 @@
         ?>
         <table>
             <tr>
-                <th class="code">Code</th>
-                <th class="name">Name</th>
-                <th class="ingred">Ingredients</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Ingredients</th>
                 <th class="action">Actions</th>
             </tr>
             <?php
             foreach($list as $flavor){
                 ?>
                 <tr>
-                    <td class="code"><?=$flavor->getCode()?></td>
-                    <td class="name"><?=$flavor->getName()?></td>
-                    <td class="ingred"><?=$flavor->getIngredients()?></td>
+                    <td><?=$flavor->getCode()?></td>
+                    <td><?=$flavor->getName()?></td>
+                    <td><?=$flavor->getIngredients()?></td>
                     <td class="action">
                     <a href="adm_flavor.php?acao=update&cod=<?=$flavor->getCode()?>">update</a> 
                     | 

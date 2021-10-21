@@ -19,7 +19,7 @@
         }
 
         public function setNameSize($nameSize){
-            $this->nomenameSize = $nameSize;
+            $this->nameSize = $nameSize;
         }
 
         public function getPrice(){

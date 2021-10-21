@@ -45,10 +45,10 @@
             <br><br>
             <fieldset>
                 <legend>Select the edge option:</legend>
-                <label class="radio"><input type="radio" name="edge" value="Borderless" checked>Borderless<span class="option"></span></label><br>
-                <label class="radio"><input type="radio" name="edge" value="Catupiry">Catupiry<span class="option"></span></label><br>
-                <label class="radio"><input type="radio" name="edge" value="Cheddar">Cheddar<span class="option"></span></label><br>
-                <label class="radio"><input type="radio" name="edge" value="Chocolate">Chocolate<span class="option"></span></label><br>
+                <label class="radio"><input type="radio" name="edge" value="1" checked>Borderless<span class="option"></span></label><br>
+                <label class="radio"><input type="radio" name="edge" value="2">Catupiry<span class="option"></span></label><br>
+                <label class="radio"><input type="radio" name="edge" value="3">Cheddar<span class="option"></span></label><br>
+                <label class="radio"><input type="radio" name="edge" value="4">Chocolate<span class="option"></span></label><br>
             </fieldset>
             <br><br>
             <input type="submit" value="Add to cart" name="add" id="add">

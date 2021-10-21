@@ -212,6 +212,18 @@ form label {
     margin-bottom: 5px;
 }
 
+.buttoncart {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+
+.buttoncart i {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
 input, select, textarea {
 	background-color: #cccccc;
     color: #333333;
