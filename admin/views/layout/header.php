@@ -46,7 +46,7 @@ if(!isset($_SESSION['logged']) || $_SESSION['logged'] == false){
                     </a>
                 </li>
                 <li id="orders">
-                        <a href="#">
+                        <a href="adm_order.php">
                         <span>Orders</span>
                     </a>
                 </li>

@@ -11,6 +11,60 @@
             $this->connection = Connection::connect();
         }
 
+        public function list(){
+            try{
+                $query = $this->connection->prepare("SELECT * FROM orderPizza ORDER BY code");
+                $query->execute();
+                $array = $query->fetchAll(PDO::FETCH_CLASS, "Order");
+                return $array;
+            }
+            catch(PDOException $e){
+                echo "ERROR: ".$e->getMessage();
+            }
+        }
+
+        public function search($code){
+            try{
+                $query = $this->connection->prepare("SELECT * FROM orderPizza WHERE code = :code");
+                $query->bindParam(":code", $code);
+                $query->execute();
+                $array = $query->fetchAll(PDO::FETCH_CLASS, "Order");
+                if(count($array) == 1)
+                    return $array[0];
+                else
+                    return false; 
+            }
+            catch(PDOException $e){
+                echo "ERROR: ".$e->getMessage();
+            }
+        } 
+
+        public function searchClient($codClient){
+            try{
+                $query = $this->connection->prepare("SELECT * FROM orderPizza WHERE codClient = :codClient");
+                $query->bindParam(":codClient", $codClient);
+                $query->execute();
+                $array = $query->fetchAll(PDO::FETCH_CLASS, "Order");
+                return $array;
+            }
+            catch(PDOException $e){
+                echo "ERROR: ".$e->getMessage();
+            }
+        } 
+
+        public function searchItemOrder($codOrder){
+            try{
+                $query = $this->connection->prepare("SELECT * FROM itemOrder WHERE codOrder = :codOrder");
+                $query->bindParam(":codOrder", $codOrder);
+                $query->execute();
+                $array = $query->fetch(PDO::FETCH_ASSOC);
+                return $array;
+            }
+            catch(PDOException $e){
+                echo "ERROR: ".$e->getMessage();
+            }
+        }
+
         public function insert(Order $order){
             try{
                 // inserindo pedido
