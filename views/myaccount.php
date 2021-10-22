@@ -6,6 +6,7 @@
     $obj = new OrderDAO();
     $list = $obj->searchClient($_SESSION['code']);
     $objf = new FlavorDAO();
+    $a=0;
 ?>
 
 <main>
@@ -27,19 +28,20 @@
                 <?php
                 foreach($list as $order){
                     ?>
-                    <tr>
-                        <th>Code</th>
+                    <tr class="titleOrder">
+                        <th colspan="2">Code</th>
                         <th>Delivery Fee</th>
                         <th>Delivery Type</th>
                         <th>Date</th>
                     </tr>
-                    <tr>
-                        <td><?=$order->getCode()?></td>
+                    <tr class="contentOrder">
+                        <td colspan="2"><?=$a+1?></td>
                         <td><?=$order->getDeliveryFee()?></td>
                         <td><?=$order->getDeliveryType()?></td>
                         <td><?=$order->getDateOrder()?></td>
                     </tr>
-                    <tr>
+                    <tr class="titleItem">
+                        <th>Item</th>
                         <th>Size</th>
                         <th>Flavors</th>
                         <th>Edge</th>
@@ -48,62 +50,66 @@
                     <?php
                     $codOrder = $order->getCode();
                     $array = $obj->searchItemOrder($codOrder);
-                    $list = array($array);
-                    foreach($list as $item){
-                        $size = $item['codSize'];
-                        $flavor1 = $objf->search($item['flavor1']);
-                        $flavor2 = $objf->search($item['flavor2']);
-                        $flavor3 = $objf->search($item['flavor3']);
-                        $flavor4 = $objf->search($item['flavor4']);
-                        $flavor5 = $objf->search($item['flavor5']);
+                    $listItem = array($array);
+                    foreach($listItem as $item){
+                        for ($i=0; $i < sizeof($item); $i++) { 
+                            $size = $item[$i]['codSize'];
+                            $flavor1 = $objf->search($item[$i]['flavor1']);
+                            $flavor2 = $objf->search($item[$i]['flavor2']);
+                            $flavor3 = $objf->search($item[$i]['flavor3']);
+                            $flavor4 = $objf->search($item[$i]['flavor4']);
+                            $flavor5 = $objf->search($item[$i]['flavor5']);
 
-                        $flavors = "";
-                        if($flavor1!=NULL){
-                            $flavors .=$flavor1->getName().", ";
+                            $flavors = "";
+                            if($flavor1!=NULL){
+                                $flavors .=$flavor1->getName().", ";
+                            }
+                            if($flavor2!=NULL){
+                                $flavors .=$flavor2->getName().", ";
+                            }
+                            if($flavor3!=NULL){
+                                $flavors .=$flavor3->getName().", ";
+                            }
+                            if($flavor4!=NULL){
+                                $flavors .=$flavor4->getName().", ";
+                            }
+                            if($flavor5!=NULL){
+                                $flavors .=$flavor5->getName().", ";
+                            }
+                            $flavors = substr($flavors, 0, strlen($flavors)-2);
+                            
+                            if($size==1) {
+                                $namesize = "Extra Small";
+                                $price = 4;
+                            }
+                            else if($size==2) {
+                                $namesize = "Small";
+                                $price = 7;
+                            }
+                            else if($size==3) {
+                                $namesize = "Medium";
+                                $price = 10;
+                            }
+                            else if($size==4) {
+                                $namesize = "Large";
+                                $price = 13;
+                            }
+                            else if($size==5) {
+                                $namesize = "Extra Large";
+                                $price = 16;
+                            } 
+                            ?>
+                            <tr class="contentItem">
+                                <td><?=$i+1?></td>
+                                <td><?=$namesize?></td>
+                                <td><?=$flavors?></td>
+                                <td> <?if($item[$i]['edge']==1){ echo "Borderless"; } else if($item[$i]['edge']==2){ echo "Catupiry"; } else if($item[$i]['edge']==3){ echo "Cheddar"; } else if($item[$i]['edge']==4){ echo "Chocolate"; }?></td>
+                                <td><?=Helper::formatPrice($price)?></td>
+                            </tr>
+                            <?php
                         }
-                        if($flavor2!=NULL){
-                            $flavors .=$flavor2->getName().", ";
-                        }
-                        if($flavor3!=NULL){
-                            $flavors .=$flavor3->getName().", ";
-                        }
-                        if($flavor4!=NULL){
-                            $flavors .=$flavor4->getName().", ";
-                        }
-                        if($flavor5!=NULL){
-                            $flavors .=$flavor5->getName().", ";
-                        }
-                        $flavors = substr($flavors, 0, strlen($flavors)-2);
-                        
-                        if($size==1) {
-                            $namesize = "Extra Small";
-                            $price = 4;
-                        }
-                        else if($size==2) {
-                            $namesize = "Small";
-                            $price = 7;
-                        }
-                        else if($size==3) {
-                            $namesize = "Medium";
-                            $price = 10;
-                        }
-                        else if($size==4) {
-                            $namesize = "Large";
-                            $price = 13;
-                        }
-                        else if($size==5) {
-                            $namesize = "Extra Large";
-                            $price = 16;
-                        } 
-                        ?>
-                        <tr>
-                            <td><?=$namesize?></td>
-                            <td><?=$flavors?></td>
-                            <td> <?if($item['edge']==1){ echo "Borderless"; } else if($item['edge']==2){ echo "Catupiry"; } else if($item['edge']==3){ echo "Cheddar"; } else if($item['edge']==4){ echo "Chocolate"; }?></td>
-                            <td><?=Helper::formatPrice($price)?></td>
-                        </tr>
-                        <?php
                     }
+                    $a++;
                 }
                 ?>
             </table>

@@ -3,7 +3,7 @@
 .container {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 10vh 3vh minmax(1vh, auto) minmax(60vh, auto) minmax(60vh, auto) minmax(5vh, auto) minmax(5vh, auto) minmax(5vh, auto);
+	grid-template-rows: 10vh 8vh minmax(5vh, auto) minmax(5vh, auto) minmax(1vh, auto) minmax(20vh, auto) minmax(30vh, auto) minmax(5vh, auto) minmax(5vh, auto) minmax(5vh, auto);
 }
 
 body {
@@ -20,13 +20,13 @@ body {
 
 nav {
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 5/6;
     display: none;
 }
 
 main {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 6/7;
     padding: 40px 40px;
     font-family: Helvetica, sans-serif;
     color: #FFF;
@@ -34,12 +34,12 @@ main {
 
 aside {
     grid-column: 1/2;
-    grid-row: 5/6;
+    grid-row: 7/8;
 }
 
 footer {
     grid-column: 1/2;
-    grid-row: 6/9;
+    grid-row: 8/11;
     background-color: #cccccc;
     text-align: center;
     color: #333333;
@@ -52,16 +52,16 @@ footer {
 
 .menu {
     position: relative;  
-    top: 3vh;
     width: 100%;
     text-align: center;
     font-family: Helvetica, sans-serif;
     font-size: 1.3rem;
 }
 
-.menu_mobile{
+#menu_mobile{
     color: #FFF;
     font-family: Helvetica, sans-serif;
+    text-align: center;
     display: block;
 }
 
@@ -79,8 +79,6 @@ nav li {
 }
 
 #menu {
-    grid-column: 1/2;
-    grid-row: 2/3;
     display: block;
     font-family: Helvetica, sans-serif;
     font-size: 1.3rem;
@@ -90,7 +88,14 @@ nav li {
 }
 
 #showMenu {
-    display: block;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    color: #FFF;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    cursor: pointer;
+    display: block;    
 }
 
 
@@ -128,7 +133,6 @@ header {
 
 #welcome {
     font-size: 5vw;
-    margin-top: 130px;
 }
 
 #BA {
@@ -273,7 +277,7 @@ input[type=submit]:hover, input[type=reset]:hover{
     margin-top: 30px;
 }
 
-#email, #password, #name, #fone, #subject, #db, #password1, #password2, #state, #city, #aaddress, #district, iframe {
+#email, #login, #password, #name, #fone, #subject, #db, #password1, #password2, #state, #city, #aaddress, #district, iframe {
     width: 95%;
 }
 
@@ -305,6 +309,7 @@ input[type=submit]:hover, input[type=reset]:hover{
 table {
     position: relative;
     top: 30px;
+    width: 100%;
 }
 
 .tablePrice tr th {
@@ -369,6 +374,33 @@ table a, a {
 
 .action {
     text-align: center;
+}
+
+.titleOrder th {
+    color: #AA0000;
+    background-color: #ddd;   
+    border-bottom: 2px solid #AA0000;
+    font-size: 1rem;
+}
+
+.contentOrder td {
+    color: #AA0000;
+    background-color: #ddd;
+    border-bottom: 1px solid #AA0000;
+    font-size: 1rem;
+}
+
+.titleItem th {
+    font-size: 0.9rem;
+}
+
+.contentItem td {
+    font-size: 0.9rem;
+}
+
+.bx-search-alt-2 {
+    font-size: 1.5rem;
+    cursor: pointer; 
 }
 
 
@@ -705,6 +737,10 @@ footer a {
 
     /* Menu */
 
+    .menu {
+        top: 3vh;
+    }
+
     .menu_web {
         display: block;
         color: white;
@@ -717,6 +753,10 @@ footer a {
 
     .menu_web i, .menu_web a {
         color: white;
+    }
+
+    #menu_mobile {
+        display: none;
     }
 
     .menu_admin {
@@ -741,6 +781,10 @@ footer a {
     }
 
     #menu {
+        display: none;
+    }
+
+    #showMenu {
         display: none;
     }
 

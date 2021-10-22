@@ -2,7 +2,6 @@
 include_once "views/layout/header.php";
 include_once "../classes/FlavorDAO.php";
 if(!isset($_GET['acao'])){
-    // nenhuma acao: carrega pg inicial de adm. de sabores 
     $title = "Flavor List";
     $obj = new FlavorDAO();
     $list = $obj->list();

@@ -57,7 +57,7 @@
                 $query = $this->connection->prepare("SELECT * FROM itemOrder WHERE codOrder = :codOrder");
                 $query->bindParam(":codOrder", $codOrder);
                 $query->execute();
-                $array = $query->fetch(PDO::FETCH_ASSOC);
+                $array = $query->fetchAll(PDO::FETCH_ASSOC);
                 return $array;
             }
             catch(PDOException $e){

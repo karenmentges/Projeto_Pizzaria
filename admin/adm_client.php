@@ -8,7 +8,6 @@ if(!isset($_GET['acao'])){
     include "views/listClient.php";
 }
 else {   
-
 	switch($_GET['acao']){
 
         case 'insert':

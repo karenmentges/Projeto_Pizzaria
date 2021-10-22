@@ -12,4 +12,5 @@
     </footer>
 </div>
 </body>
+<script src="../assets/js/functions.js"></script>
 </html>
