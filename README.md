@@ -2,10 +2,10 @@
 
 Informações para acesso no site:
 
-Usuário Administrador
-login: admin
-senha: pizza123
+Usuário Administrador <br>
+login: admin <br>
+senha: pizza123 <br>
 
-Usuário que foi cadastrado os pedidos
-login: janedoe@gmail.com
-senha: cli123
+Usuário que foi cadastrado os pedidos <br>
+login: janedoe@gmail.com <br>
+senha: cli123 <br>
