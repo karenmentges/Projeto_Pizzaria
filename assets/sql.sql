@@ -72,8 +72,6 @@ CREATE TABLE itemOrder (
   FOREIGN KEY (flavor5) REFERENCES flavorPizza(code)
 );
 
-
-
 INSERT INTO flavorPizza values (NULL, "Chicken", "Sauce, chicken, cream cheese and mozzarella", "chicken.jpg");
 INSERT INTO flavorPizza values (NULL, "Corn", "Sauce, corn and mozzarella", "corn.jpg");
 INSERT INTO flavorPizza values (NULL, "Garlic and oil", "Sauce, garlic, oil and mozzarella", "garlic.jpg");
@@ -84,13 +82,28 @@ INSERT INTO flavorPizza values (NULL, "Stroganoff", "Sauce, stroganoff and potat
 INSERT INTO flavorPizza values (NULL, "Tuna", "Sauce, tuna, onion and mozzarella", "tuna.jpg");
 INSERT INTO flavorPizza values (NULL, "Vegetarian", "Sauce, arugula, sun-dried tomatoes and mozzarella", "vegetarian.jpg");
 
-
-
 INSERT INTO sizePizza values (NULL, "es", "Extra Small", 1, 4);
 INSERT INTO sizePizza values (NULL, "s", "Small", 2, 7);
 INSERT INTO sizePizza values (NULL, "m", "Medium", 3, 10);
 INSERT INTO sizePizza values (NULL, "l", "Large", 4, 13);
 INSERT INTO sizePizza values (NULL, "el", "Extra Large", 5, 16);
 
-/* inserindo uma cliente com senha cli123 */
-INSERT INTO client VALUES (NULL, "Karen Ruver Mentges", "karen@gmail.com", "111111", "2000-02-01", "$2y$10$L.AfIDkigTTNjCJL7i6wZ.288kMqc1Byz.kcfOVaPok2JfsN6wgtC", "SC", "Nova Erechim", "Rua Carlos Gomes, 191", "Centro", 1, 0, 0, NULL); 
+/* inserindo clientes com senha cli123 */
+INSERT INTO client VALUES (NULL, "Jane Doe", "janedoe@gmail.com", "49111111111", "2000-02-01", "$2y$10$L.AfIDkigTTNjCJL7i6wZ.288kMqc1Byz.kcfOVaPok2JfsN6wgtC", "SC", "Chapecó", "Rua Marajó, 222", "Bela Vista", 1, 0, 0, NULL);
+INSERT INTO client VALUES (NULL, "Vanessa Giandra", "vanessagiandra@gmail.com", "49222222222", "1999-11-09", "$2y$10$L.AfIDkigTTNjCJL7i6wZ.288kMqc1Byz.kcfOVaPok2JfsN6wgtC", "PR", "Curitiba", "Avenida Visconde de Guarapuava, 1024", "Pinheirinho", 2, 1, 1, NULL); 
+INSERT INTO client VALUES (NULL, "Chelsey Brown", "chelseybrown@gmail.com", "49333333333", "1980-07-25", "$2y$10$L.AfIDkigTTNjCJL7i6wZ.288kMqc1Byz.kcfOVaPok2JfsN6wgtC", "RS", "Porto Alegre", "Avenida Mauá, 986", "Centro", 3, 1, 0, NULL); 
+INSERT INTO client VALUES (NULL, "Helena Cavalcanti", "helenacavalcanti@gmail.com", "49444444444", "1993-05-12", "$2y$10$L.AfIDkigTTNjCJL7i6wZ.288kMqc1Byz.kcfOVaPok2JfsN6wgtC", "SC", "Florianópolis", "Travessa A, 45", "José Mendes", 4, 0, 1, NULL);  
+
+/* inserindo pedidos para a cliente Jane Doe */
+INSERT INTO orderPizza VALUES (NULL, 1, 0, 2, "2021-10-20 03:59:03", 0);
+INSERT INTO itemOrder VALUES (NULL, 1, 5, 4, 5, 6, 7, 8, 2, 16);
+INSERT INTO itemOrder VALUES (NULL, 1, 1, 9, NULL, NULL, NULL, NULL, 4, 4);
+INSERT INTO itemOrder VALUES (NULL, 1, 3, 1, 2, 3, NULL, NULL, 3, 10);
+INSERT INTO itemOrder VALUES (NULL, 1, 2, 5, 9, NULL, NULL, NULL, 1, 7);
+
+INSERT INTO orderPizza VALUES (NULL, 1, 0, 1, "2021-10-21 00:45:31", 0);
+INSERT INTO itemOrder VALUES (NULL, 2, 1, 1, NULL, NULL, NULL, NULL, 4, 4);
+INSERT INTO itemOrder VALUES (NULL, 2, 2, 8, NULL, NULL, NULL, NULL, 2, 7);
+
+INSERT INTO orderPizza VALUES (NULL, 1, 0, 1, "2021-10-22 00:55:03", 0);
+INSERT INTO itemOrder VALUES (NULL, 3, 1, 4, NULL, NULL, NULL, NULL, 1, 4);
